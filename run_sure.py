@@ -1414,7 +1414,7 @@ def main():
                 shutil.copyfile(script, dst_file)
 
     if args.do_train and args.local_rank in [-1, 0] and args.output_dir.find('test')==-1:
-        create_exp_dir(args.output_dir, scripts_to_save=['run_sure.py', 'transformers/src/transformers/modeling_bert.py', 'transformers/src/transformers/modeling_albert.py'])
+        create_exp_dir(args.output_dir, scripts_to_save=['MRN-LCR.py', 'transformers/src/transformers/modeling_bert.py', 'transformers/src/transformers/modeling_albert.py'])
 
 
     # Setup distant debugging if needed
