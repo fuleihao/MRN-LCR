@@ -1,0 +1,9 @@
+--------------------------
+Best result on dev ent_pred_dev.json
+{'ner_p': 0.7406060606060606, 'ner_r': 0.7533908754623921, 'ner_f1': 0.7469437652811737, 'p': 0.585427135678392, 'r': 0.512087912087912, 'f1': 0.5463071512309495, 'p+': 0.5150753768844221, 'r+': 0.45054945054945056, 'f1_with_ner': 0.4806565064478312}
+--------------------------
+Test result of /root/siton-data-guanchunxiangData/fuleihao/HGERE/saves/sciner_models/pruner/biafencoder-spanlen12-rank768-hid768-span256-entnum3-18-lr2e-5/scierc_scibert-42/ent_pred_train.json
+{'ner_p': 0.9958647968356706, 'ner_r': 0.9894605216148624, 'ner_f1': 0.9926523297491039, 'p': 0.9770151133501259, 'r': 0.963963963963964, 'f1': 0.9704456606724003, 'p+': 0.9697732997481109, 'r+': 0.9568188878533707, 'f1_with_ner': 0.9632525410476935}
+--------------------------
+Test result of /root/siton-data-guanchunxiangData/fuleihao/HGERE/saves/sciner_models/pruner/biafencoder-spanlen12-rank768-hid768-span256-entnum3-18-lr2e-5/scierc_scibert-42/ent_pred_test.json
+{'ner_p': 0.7318668252080857, 'ner_r': 0.7305637982195846, 'ner_f1': 0.7312147312147314, 'p': 0.5774155995343423, 'r': 0.5092402464065708, 'f1': 0.541189307146754, 'p+': 0.4412107101280559, 'r+': 0.3891170431211499, 'f1_with_ner': 0.4135297326786689}

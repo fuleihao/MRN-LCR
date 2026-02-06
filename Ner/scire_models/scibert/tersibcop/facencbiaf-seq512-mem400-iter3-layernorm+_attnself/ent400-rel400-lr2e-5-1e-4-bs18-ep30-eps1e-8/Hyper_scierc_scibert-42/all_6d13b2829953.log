@@ -1,0 +1,569 @@
+2025-11-08 17:34:37,173 [MainThread  ] [WARNI]  Process rank: -1, device: cuda, n_gpu: 1, distributed training: False, 16-bits training: True
+2025-11-08 17:36:10,332 [MainThread  ] [WARNI]  Process rank: -1, device: cuda, n_gpu: 1, distributed training: False, 16-bits training: True
+2025-11-08 17:36:10,338 [MainThread  ] [INFO ]  loading configuration file /root/siton-data-guanchunxiangData/fuleihao/SURE/bert_models/scibert_scivocab_uncased/config.json
+2025-11-08 17:36:10,338 [MainThread  ] [INFO ]  Model config BertConfig {
+  "architectures": null,
+  "attention_probs_dropout_prob": 0.1,
+  "bos_token_id": null,
+  "do_sample": false,
+  "eos_token_ids": null,
+  "finetuning_task": null,
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 768,
+  "id2label": {
+    "0": "LABEL_0",
+    "1": "LABEL_1"
+  },
+  "initializer_range": 0.02,
+  "intermediate_size": 3072,
+  "is_decoder": false,
+  "label2id": {
+    "LABEL_0": 0,
+    "LABEL_1": 1
+  },
+  "layer_norm_eps": 1e-12,
+  "length_penalty": 1.0,
+  "max_length": 20,
+  "max_position_embeddings": 512,
+  "model_type": "bert",
+  "num_attention_heads": 12,
+  "num_beams": 1,
+  "num_hidden_layers": 12,
+  "num_labels": 13,
+  "num_return_sequences": 1,
+  "output_attentions": false,
+  "output_hidden_states": false,
+  "output_past": true,
+  "pad_token_id": 0,
+  "pruned_heads": {},
+  "repetition_penalty": 1.0,
+  "temperature": 1.0,
+  "top_k": 50,
+  "top_p": 1.0,
+  "torchscript": false,
+  "type_vocab_size": 2,
+  "use_bfloat16": false,
+  "vocab_size": 31090
+}
+
+2025-11-08 17:36:10,338 [MainThread  ] [INFO ]  Model name '/root/siton-data-guanchunxiangData/fuleihao/SURE/bert_models/scibert_scivocab_uncased' not found in model shortcut name list (bert-base-uncased, bert-large-uncased, bert-base-cased, bert-large-cased, bert-base-multilingual-uncased, bert-base-multilingual-cased, bert-base-chinese, bert-base-german-cased, bert-large-uncased-whole-word-masking, bert-large-cased-whole-word-masking, bert-large-uncased-whole-word-masking-finetuned-squad, bert-large-cased-whole-word-masking-finetuned-squad, bert-base-cased-finetuned-mrpc, bert-base-german-dbmdz-cased, bert-base-german-dbmdz-uncased, bert-base-finnish-cased-v1, bert-base-finnish-uncased-v1, bert-base-dutch-cased). Assuming '/root/siton-data-guanchunxiangData/fuleihao/SURE/bert_models/scibert_scivocab_uncased' is a path, a model identifier, or url to a directory containing tokenizer files.
+2025-11-08 17:36:10,338 [MainThread  ] [INFO ]  Didn't find file /root/siton-data-guanchunxiangData/fuleihao/SURE/bert_models/scibert_scivocab_uncased/added_tokens.json. We won't load it.
+2025-11-08 17:36:10,338 [MainThread  ] [INFO ]  Didn't find file /root/siton-data-guanchunxiangData/fuleihao/SURE/bert_models/scibert_scivocab_uncased/special_tokens_map.json. We won't load it.
+2025-11-08 17:36:10,339 [MainThread  ] [INFO ]  Didn't find file /root/siton-data-guanchunxiangData/fuleihao/SURE/bert_models/scibert_scivocab_uncased/tokenizer_config.json. We won't load it.
+2025-11-08 17:36:10,339 [MainThread  ] [INFO ]  loading file /root/siton-data-guanchunxiangData/fuleihao/SURE/bert_models/scibert_scivocab_uncased/vocab.txt
+2025-11-08 17:36:10,339 [MainThread  ] [INFO ]  loading file None
+2025-11-08 17:36:10,339 [MainThread  ] [INFO ]  loading file None
+2025-11-08 17:36:10,339 [MainThread  ] [INFO ]  loading file None
+2025-11-08 17:36:10,364 [MainThread  ] [INFO ]  loading weights file /root/siton-data-guanchunxiangData/fuleihao/SURE/bert_models/scibert_scivocab_uncased/pytorch_model.bin
+2025-11-08 17:36:12,944 [MainThread  ] [INFO ]  Weights of BertForHyperGNN not initialized from pretrained model: ['sub_encoder.projection.weight', 'sub_encoder.projection.bias', 'obj_encoder.projection.weight', 'obj_encoder.projection.bias', 'rel_encoder.projection.weight', 'rel_encoder.projection.bias', 'htnnlayer.hyperedgelayer1.factor_compose.proj1.weight', 'htnnlayer.hyperedgelayer1.factor_compose.proj1.bias', 'htnnlayer.hyperedgelayer1.factor_compose.proj2.weight', 'htnnlayer.hyperedgelayer1.factor_compose.proj2.bias', 'htnnlayer.hyperedgelayer1.factor_compose.proj3.weight', 'htnnlayer.hyperedgelayer1.factor_compose.proj3.bias', 'htnnlayer.hyperedgelayer1.factor_compose.encode_proj.weight', 'htnnlayer.hyperedgelayer1.factor_compose.encode_proj.bias', 'htnnlayer.hyperedgelayer1.layernorm.weight', 'htnnlayer.hyperedgelayer1.layernorm.bias', 'htnnlayer.hyperedgelayer2.factor_compose1.proj1.weight', 'htnnlayer.hyperedgelayer2.factor_compose1.proj1.bias', 'htnnlayer.hyperedgelayer2.factor_compose1.proj2.weight', 'htnnlayer.hyperedgelayer2.factor_compose1.proj2.bias', 'htnnlayer.hyperedgelayer2.factor_compose1.encoder.weight', 'htnnlayer.hyperedgelayer2.factor_compose1.encoder.bias', 'htnnlayer.hyperedgelayer2.factor_compose2.proj1.weight', 'htnnlayer.hyperedgelayer2.factor_compose2.proj1.bias', 'htnnlayer.hyperedgelayer2.factor_compose2.proj2.weight', 'htnnlayer.hyperedgelayer2.factor_compose2.proj2.bias', 'htnnlayer.hyperedgelayer2.factor_compose2.encoder.weight', 'htnnlayer.hyperedgelayer2.factor_compose2.encoder.bias', 'htnnlayer.hyperedgelayer2.layernorm1.weight', 'htnnlayer.hyperedgelayer2.layernorm1.bias', 'htnnlayer.hyperedgelayer2.layernorm2.weight', 'htnnlayer.hyperedgelayer2.layernorm2.bias', 'htnnlayer.aggregate.proj_s.weight', 'htnnlayer.aggregate.proj_s.bias', 'htnnlayer.aggregate.proj_o.weight', 'htnnlayer.aggregate.proj_o.bias', 'htnnlayer.aggregate.proj_r.weight', 'htnnlayer.aggregate.proj_r.bias', 'htnnlayer.aggregate.attn_combine_s.0.weight', 'htnnlayer.aggregate.attn_combine_s.0.bias', 'htnnlayer.aggregate.attn_combine_o.0.weight', 'htnnlayer.aggregate.attn_combine_o.0.bias', 'htnnlayer.aggregate.attn_combine_r.0.weight', 'htnnlayer.aggregate.attn_combine_r.0.bias', 'htnnlayer.aggregate.sv.weight', 'htnnlayer.aggregate.ov.weight', 'htnnlayer.aggregate.rv.weight', 'htnnlayer.aggregate.fc_s.weight', 'htnnlayer.aggregate.fc_s.bias', 'htnnlayer.aggregate.fc_o.weight', 'htnnlayer.aggregate.fc_o.bias', 'htnnlayer.aggregate.fc_r.weight', 'htnnlayer.aggregate.fc_r.bias', 'htnnlayer.aggregate.layernorm_s.weight', 'htnnlayer.aggregate.layernorm_s.bias', 'htnnlayer.aggregate.layernorm_o.weight', 'htnnlayer.aggregate.layernorm_o.bias', 'htnnlayer.aggregate.layernorm_r.weight', 'htnnlayer.aggregate.layernorm_r.bias', 'rel_cls.weight', 'rel_cls.bias', 'ner_cls.projection.weight', 'ner_cls.projection.bias', 'sub_layernorm.weight', 'sub_layernorm.bias', 'obj_layernorm.weight', 'obj_layernorm.bias', 'rel_layernorm.weight', 'rel_layernorm.bias']
+2025-11-08 17:36:12,944 [MainThread  ] [INFO ]  Weights from pretrained model not used in BertForHyperGNN: ['cls.predictions.bias', 'cls.predictions.transform.dense.weight', 'cls.predictions.transform.dense.bias', 'cls.predictions.transform.LayerNorm.weight', 'cls.predictions.transform.LayerNorm.bias', 'cls.predictions.decoder.weight', 'cls.predictions.decoder.bias', 'cls.seq_relationship.weight', 'cls.seq_relationship.bias']
+2025-11-08 17:36:12,946 [MainThread  ] [INFO ]   subject_id = 2950, object_id = 2567, mask_id = 104
+2025-11-08 17:36:14,803 [MainThread  ] [INFO ]  Training/evaluation parameters Namespace(data_dir='', model_type='hyper', model_name_or_path='/root/siton-data-guanchunxiangData/fuleihao/SURE/bert_models/scibert_scivocab_uncased', output_dir='saves/HGERE/scire_models/scibert/tersibcop/facencbiaf-seq512-mem400-iter3-layernorm+_attnself/ent400-rel400-lr2e-5-1e-4-bs18-ep30-eps1e-8/Hyper_scierc_scibert-42', ner_prediction_dir='saves/sciner_models/pruner/biafencoder-spanlen12-rank768-hid768-span256-entnum3-18-lr2e-5/scierc-scibert-42', config_name='', tokenizer_name='', cache_dir='', max_seq_length=512, do_train=True, do_eval=True, do_test=False, evaluate_during_training=True, do_lower_case=True, per_gpu_train_batch_size=18, per_gpu_eval_batch_size=32, gradient_accumulation_steps=1, learning_rate=2e-05, learning_rate_cls=0.0001, weight_decay=0.0, adam_epsilon=1e-08, max_grad_norm=1.0, num_train_epochs=30.0, max_steps=-1, warmup_steps=-1, logging_steps=5, save_steps=1000, eval_epochs=3, eval_all_checkpoints=True, no_cuda=False, overwrite_output_dir=True, overwrite_cache=False, seed=42, fp16=True, fp16_opt_level='O1', local_rank=-1, server_ip='', server_port='', save_total_limit=1, train_file='ent_pred_train.json', dev_file='ent_pred_dev.json', test_file='ent_pred_test.json', max_pair_length=18, alpha=1.0, save_results=False, no_test=False, eval_logsoftmax=False, eval_softmax=False, shuffle=False, lminit=False, no_sym=False, att_left=False, att_right=False, use_ner_results=False, use_typemarker=False, eval_unidirect=False, nocross=False, warmup_ratio=0.1, eval_logits=False, ent_repr='mix', uni_ent=False, ent_enc='cat', pred_sub=False, ner_cls='cat', rel_enc='cat', ent_dim=400, rel_dim=400, rel_rank=200, rel_factorize=False, baseline='firstorder', factor_type='tersibcop', mem_dim=400, iter=3, layernorm=True, layernorm_1st=True, attn_self=True, aggregate_type='attn', aggregate_func='max', agg_with_self=False, fix_obj=False, edgetype='sib', attn_scorer='biaf', attn_res=False, n_head=8, d_head=32, factor_encoder='biaf', iter1=1, hostname='6d13b2829953', n_gpu=1, device=device(type='cuda'), model_path='/root/siton-data-guanchunxiangData/fuleihao/SURE/bert_models/scibert_scivocab_uncased', continue_training=False, global_step=0)
+2025-11-08 17:37:32,454 [MainThread  ] [WARNI]  Process rank: -1, device: cuda, n_gpu: 1, distributed training: False, 16-bits training: True
+2025-11-08 17:37:32,455 [MainThread  ] [INFO ]  loading configuration file /root/siton-data-guanchunxiangData/fuleihao/SURE/bert_models/scibert_scivocab_uncased/config.json
+2025-11-08 17:37:32,455 [MainThread  ] [INFO ]  Model config BertConfig {
+  "architectures": null,
+  "attention_probs_dropout_prob": 0.1,
+  "bos_token_id": null,
+  "do_sample": false,
+  "eos_token_ids": null,
+  "finetuning_task": null,
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 768,
+  "id2label": {
+    "0": "LABEL_0",
+    "1": "LABEL_1"
+  },
+  "initializer_range": 0.02,
+  "intermediate_size": 3072,
+  "is_decoder": false,
+  "label2id": {
+    "LABEL_0": 0,
+    "LABEL_1": 1
+  },
+  "layer_norm_eps": 1e-12,
+  "length_penalty": 1.0,
+  "max_length": 20,
+  "max_position_embeddings": 512,
+  "model_type": "bert",
+  "num_attention_heads": 12,
+  "num_beams": 1,
+  "num_hidden_layers": 12,
+  "num_labels": 13,
+  "num_return_sequences": 1,
+  "output_attentions": false,
+  "output_hidden_states": false,
+  "output_past": true,
+  "pad_token_id": 0,
+  "pruned_heads": {},
+  "repetition_penalty": 1.0,
+  "temperature": 1.0,
+  "top_k": 50,
+  "top_p": 1.0,
+  "torchscript": false,
+  "type_vocab_size": 2,
+  "use_bfloat16": false,
+  "vocab_size": 31090
+}
+
+2025-11-08 17:37:32,456 [MainThread  ] [INFO ]  Model name '/root/siton-data-guanchunxiangData/fuleihao/SURE/bert_models/scibert_scivocab_uncased' not found in model shortcut name list (bert-base-uncased, bert-large-uncased, bert-base-cased, bert-large-cased, bert-base-multilingual-uncased, bert-base-multilingual-cased, bert-base-chinese, bert-base-german-cased, bert-large-uncased-whole-word-masking, bert-large-cased-whole-word-masking, bert-large-uncased-whole-word-masking-finetuned-squad, bert-large-cased-whole-word-masking-finetuned-squad, bert-base-cased-finetuned-mrpc, bert-base-german-dbmdz-cased, bert-base-german-dbmdz-uncased, bert-base-finnish-cased-v1, bert-base-finnish-uncased-v1, bert-base-dutch-cased). Assuming '/root/siton-data-guanchunxiangData/fuleihao/SURE/bert_models/scibert_scivocab_uncased' is a path, a model identifier, or url to a directory containing tokenizer files.
+2025-11-08 17:37:32,456 [MainThread  ] [INFO ]  Didn't find file /root/siton-data-guanchunxiangData/fuleihao/SURE/bert_models/scibert_scivocab_uncased/added_tokens.json. We won't load it.
+2025-11-08 17:37:32,456 [MainThread  ] [INFO ]  Didn't find file /root/siton-data-guanchunxiangData/fuleihao/SURE/bert_models/scibert_scivocab_uncased/special_tokens_map.json. We won't load it.
+2025-11-08 17:37:32,456 [MainThread  ] [INFO ]  Didn't find file /root/siton-data-guanchunxiangData/fuleihao/SURE/bert_models/scibert_scivocab_uncased/tokenizer_config.json. We won't load it.
+2025-11-08 17:37:32,456 [MainThread  ] [INFO ]  loading file /root/siton-data-guanchunxiangData/fuleihao/SURE/bert_models/scibert_scivocab_uncased/vocab.txt
+2025-11-08 17:37:32,456 [MainThread  ] [INFO ]  loading file None
+2025-11-08 17:37:32,456 [MainThread  ] [INFO ]  loading file None
+2025-11-08 17:37:32,456 [MainThread  ] [INFO ]  loading file None
+2025-11-08 17:37:32,479 [MainThread  ] [INFO ]  loading weights file /root/siton-data-guanchunxiangData/fuleihao/SURE/bert_models/scibert_scivocab_uncased/pytorch_model.bin
+2025-11-08 17:37:34,897 [MainThread  ] [INFO ]  Weights of BertForHyperGNN not initialized from pretrained model: ['sub_encoder.projection.weight', 'sub_encoder.projection.bias', 'obj_encoder.projection.weight', 'obj_encoder.projection.bias', 'rel_encoder.projection.weight', 'rel_encoder.projection.bias', 'htnnlayer.hyperedgelayer1.factor_compose.proj1.weight', 'htnnlayer.hyperedgelayer1.factor_compose.proj1.bias', 'htnnlayer.hyperedgelayer1.factor_compose.proj2.weight', 'htnnlayer.hyperedgelayer1.factor_compose.proj2.bias', 'htnnlayer.hyperedgelayer1.factor_compose.proj3.weight', 'htnnlayer.hyperedgelayer1.factor_compose.proj3.bias', 'htnnlayer.hyperedgelayer1.factor_compose.encode_proj.weight', 'htnnlayer.hyperedgelayer1.factor_compose.encode_proj.bias', 'htnnlayer.hyperedgelayer1.layernorm.weight', 'htnnlayer.hyperedgelayer1.layernorm.bias', 'htnnlayer.hyperedgelayer2.factor_compose1.proj1.weight', 'htnnlayer.hyperedgelayer2.factor_compose1.proj1.bias', 'htnnlayer.hyperedgelayer2.factor_compose1.proj2.weight', 'htnnlayer.hyperedgelayer2.factor_compose1.proj2.bias', 'htnnlayer.hyperedgelayer2.factor_compose1.encoder.weight', 'htnnlayer.hyperedgelayer2.factor_compose1.encoder.bias', 'htnnlayer.hyperedgelayer2.factor_compose2.proj1.weight', 'htnnlayer.hyperedgelayer2.factor_compose2.proj1.bias', 'htnnlayer.hyperedgelayer2.factor_compose2.proj2.weight', 'htnnlayer.hyperedgelayer2.factor_compose2.proj2.bias', 'htnnlayer.hyperedgelayer2.factor_compose2.encoder.weight', 'htnnlayer.hyperedgelayer2.factor_compose2.encoder.bias', 'htnnlayer.hyperedgelayer2.layernorm1.weight', 'htnnlayer.hyperedgelayer2.layernorm1.bias', 'htnnlayer.hyperedgelayer2.layernorm2.weight', 'htnnlayer.hyperedgelayer2.layernorm2.bias', 'htnnlayer.aggregate.proj_s.weight', 'htnnlayer.aggregate.proj_s.bias', 'htnnlayer.aggregate.proj_o.weight', 'htnnlayer.aggregate.proj_o.bias', 'htnnlayer.aggregate.proj_r.weight', 'htnnlayer.aggregate.proj_r.bias', 'htnnlayer.aggregate.attn_combine_s.0.weight', 'htnnlayer.aggregate.attn_combine_s.0.bias', 'htnnlayer.aggregate.attn_combine_o.0.weight', 'htnnlayer.aggregate.attn_combine_o.0.bias', 'htnnlayer.aggregate.attn_combine_r.0.weight', 'htnnlayer.aggregate.attn_combine_r.0.bias', 'htnnlayer.aggregate.sv.weight', 'htnnlayer.aggregate.ov.weight', 'htnnlayer.aggregate.rv.weight', 'htnnlayer.aggregate.fc_s.weight', 'htnnlayer.aggregate.fc_s.bias', 'htnnlayer.aggregate.fc_o.weight', 'htnnlayer.aggregate.fc_o.bias', 'htnnlayer.aggregate.fc_r.weight', 'htnnlayer.aggregate.fc_r.bias', 'htnnlayer.aggregate.layernorm_s.weight', 'htnnlayer.aggregate.layernorm_s.bias', 'htnnlayer.aggregate.layernorm_o.weight', 'htnnlayer.aggregate.layernorm_o.bias', 'htnnlayer.aggregate.layernorm_r.weight', 'htnnlayer.aggregate.layernorm_r.bias', 'rel_cls.weight', 'rel_cls.bias', 'ner_cls.projection.weight', 'ner_cls.projection.bias', 'sub_layernorm.weight', 'sub_layernorm.bias', 'obj_layernorm.weight', 'obj_layernorm.bias', 'rel_layernorm.weight', 'rel_layernorm.bias']
+2025-11-08 17:37:34,897 [MainThread  ] [INFO ]  Weights from pretrained model not used in BertForHyperGNN: ['cls.predictions.bias', 'cls.predictions.transform.dense.weight', 'cls.predictions.transform.dense.bias', 'cls.predictions.transform.LayerNorm.weight', 'cls.predictions.transform.LayerNorm.bias', 'cls.predictions.decoder.weight', 'cls.predictions.decoder.bias', 'cls.seq_relationship.weight', 'cls.seq_relationship.bias']
+2025-11-08 17:37:34,899 [MainThread  ] [INFO ]   subject_id = 2950, object_id = 2567, mask_id = 104
+2025-11-08 17:37:37,034 [MainThread  ] [INFO ]  Training/evaluation parameters Namespace(data_dir='', model_type='hyper', model_name_or_path='/root/siton-data-guanchunxiangData/fuleihao/SURE/bert_models/scibert_scivocab_uncased', output_dir='saves/HGERE/scire_models/scibert/tersibcop/facencbiaf-seq512-mem400-iter3-layernorm+_attnself/ent400-rel400-lr2e-5-1e-4-bs18-ep30-eps1e-8/Hyper_scierc_scibert-42', ner_prediction_dir='HGERE/saves/sciner_models/pruner/biafencoder-spanlen12-rank768-hid768-span256-entnum3-18-lr2e-5/scierc_scibert-42', config_name='', tokenizer_name='', cache_dir='', max_seq_length=512, do_train=True, do_eval=True, do_test=False, evaluate_during_training=True, do_lower_case=True, per_gpu_train_batch_size=18, per_gpu_eval_batch_size=32, gradient_accumulation_steps=1, learning_rate=2e-05, learning_rate_cls=0.0001, weight_decay=0.0, adam_epsilon=1e-08, max_grad_norm=1.0, num_train_epochs=30.0, max_steps=-1, warmup_steps=-1, logging_steps=5, save_steps=1000, eval_epochs=3, eval_all_checkpoints=True, no_cuda=False, overwrite_output_dir=True, overwrite_cache=False, seed=42, fp16=True, fp16_opt_level='O1', local_rank=-1, server_ip='', server_port='', save_total_limit=1, train_file='ent_pred_train.json', dev_file='ent_pred_dev.json', test_file='ent_pred_test.json', max_pair_length=18, alpha=1.0, save_results=False, no_test=False, eval_logsoftmax=False, eval_softmax=False, shuffle=False, lminit=False, no_sym=False, att_left=False, att_right=False, use_ner_results=False, use_typemarker=False, eval_unidirect=False, nocross=False, warmup_ratio=0.1, eval_logits=False, ent_repr='mix', uni_ent=False, ent_enc='cat', pred_sub=False, ner_cls='cat', rel_enc='cat', ent_dim=400, rel_dim=400, rel_rank=200, rel_factorize=False, baseline='firstorder', factor_type='tersibcop', mem_dim=400, iter=3, layernorm=True, layernorm_1st=True, attn_self=True, aggregate_type='attn', aggregate_func='max', agg_with_self=False, fix_obj=False, edgetype='sib', attn_scorer='biaf', attn_res=False, n_head=8, d_head=32, factor_encoder='biaf', iter1=1, hostname='6d13b2829953', n_gpu=1, device=device(type='cuda'), model_path='/root/siton-data-guanchunxiangData/fuleihao/SURE/bert_models/scibert_scivocab_uncased', continue_training=False, global_step=0)
+2025-11-08 17:40:58,357 [MainThread  ] [WARNI]  Process rank: -1, device: cuda, n_gpu: 1, distributed training: False, 16-bits training: True
+2025-11-08 17:40:58,363 [MainThread  ] [INFO ]  loading configuration file /root/siton-data-guanchunxiangData/fuleihao/SURE/bert_models/scibert_scivocab_uncased/config.json
+2025-11-08 17:40:58,364 [MainThread  ] [INFO ]  Model config BertConfig {
+  "architectures": null,
+  "attention_probs_dropout_prob": 0.1,
+  "bos_token_id": null,
+  "do_sample": false,
+  "eos_token_ids": null,
+  "finetuning_task": null,
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 768,
+  "id2label": {
+    "0": "LABEL_0",
+    "1": "LABEL_1"
+  },
+  "initializer_range": 0.02,
+  "intermediate_size": 3072,
+  "is_decoder": false,
+  "label2id": {
+    "LABEL_0": 0,
+    "LABEL_1": 1
+  },
+  "layer_norm_eps": 1e-12,
+  "length_penalty": 1.0,
+  "max_length": 20,
+  "max_position_embeddings": 512,
+  "model_type": "bert",
+  "num_attention_heads": 12,
+  "num_beams": 1,
+  "num_hidden_layers": 12,
+  "num_labels": 13,
+  "num_return_sequences": 1,
+  "output_attentions": false,
+  "output_hidden_states": false,
+  "output_past": true,
+  "pad_token_id": 0,
+  "pruned_heads": {},
+  "repetition_penalty": 1.0,
+  "temperature": 1.0,
+  "top_k": 50,
+  "top_p": 1.0,
+  "torchscript": false,
+  "type_vocab_size": 2,
+  "use_bfloat16": false,
+  "vocab_size": 31090
+}
+
+2025-11-08 17:40:58,364 [MainThread  ] [INFO ]  Model name '/root/siton-data-guanchunxiangData/fuleihao/SURE/bert_models/scibert_scivocab_uncased' not found in model shortcut name list (bert-base-uncased, bert-large-uncased, bert-base-cased, bert-large-cased, bert-base-multilingual-uncased, bert-base-multilingual-cased, bert-base-chinese, bert-base-german-cased, bert-large-uncased-whole-word-masking, bert-large-cased-whole-word-masking, bert-large-uncased-whole-word-masking-finetuned-squad, bert-large-cased-whole-word-masking-finetuned-squad, bert-base-cased-finetuned-mrpc, bert-base-german-dbmdz-cased, bert-base-german-dbmdz-uncased, bert-base-finnish-cased-v1, bert-base-finnish-uncased-v1, bert-base-dutch-cased). Assuming '/root/siton-data-guanchunxiangData/fuleihao/SURE/bert_models/scibert_scivocab_uncased' is a path, a model identifier, or url to a directory containing tokenizer files.
+2025-11-08 17:40:58,364 [MainThread  ] [INFO ]  Didn't find file /root/siton-data-guanchunxiangData/fuleihao/SURE/bert_models/scibert_scivocab_uncased/added_tokens.json. We won't load it.
+2025-11-08 17:40:58,364 [MainThread  ] [INFO ]  Didn't find file /root/siton-data-guanchunxiangData/fuleihao/SURE/bert_models/scibert_scivocab_uncased/special_tokens_map.json. We won't load it.
+2025-11-08 17:40:58,364 [MainThread  ] [INFO ]  Didn't find file /root/siton-data-guanchunxiangData/fuleihao/SURE/bert_models/scibert_scivocab_uncased/tokenizer_config.json. We won't load it.
+2025-11-08 17:40:58,364 [MainThread  ] [INFO ]  loading file /root/siton-data-guanchunxiangData/fuleihao/SURE/bert_models/scibert_scivocab_uncased/vocab.txt
+2025-11-08 17:40:58,365 [MainThread  ] [INFO ]  loading file None
+2025-11-08 17:40:58,365 [MainThread  ] [INFO ]  loading file None
+2025-11-08 17:40:58,365 [MainThread  ] [INFO ]  loading file None
+2025-11-08 17:40:58,393 [MainThread  ] [INFO ]  loading weights file /root/siton-data-guanchunxiangData/fuleihao/SURE/bert_models/scibert_scivocab_uncased/pytorch_model.bin
+2025-11-08 17:41:00,956 [MainThread  ] [INFO ]  Weights of BertForHyperGNN not initialized from pretrained model: ['sub_encoder.projection.weight', 'sub_encoder.projection.bias', 'obj_encoder.projection.weight', 'obj_encoder.projection.bias', 'rel_encoder.projection.weight', 'rel_encoder.projection.bias', 'htnnlayer.hyperedgelayer1.factor_compose.proj1.weight', 'htnnlayer.hyperedgelayer1.factor_compose.proj1.bias', 'htnnlayer.hyperedgelayer1.factor_compose.proj2.weight', 'htnnlayer.hyperedgelayer1.factor_compose.proj2.bias', 'htnnlayer.hyperedgelayer1.factor_compose.proj3.weight', 'htnnlayer.hyperedgelayer1.factor_compose.proj3.bias', 'htnnlayer.hyperedgelayer1.factor_compose.encode_proj.weight', 'htnnlayer.hyperedgelayer1.factor_compose.encode_proj.bias', 'htnnlayer.hyperedgelayer1.layernorm.weight', 'htnnlayer.hyperedgelayer1.layernorm.bias', 'htnnlayer.hyperedgelayer2.factor_compose1.proj1.weight', 'htnnlayer.hyperedgelayer2.factor_compose1.proj1.bias', 'htnnlayer.hyperedgelayer2.factor_compose1.proj2.weight', 'htnnlayer.hyperedgelayer2.factor_compose1.proj2.bias', 'htnnlayer.hyperedgelayer2.factor_compose1.encoder.weight', 'htnnlayer.hyperedgelayer2.factor_compose1.encoder.bias', 'htnnlayer.hyperedgelayer2.factor_compose2.proj1.weight', 'htnnlayer.hyperedgelayer2.factor_compose2.proj1.bias', 'htnnlayer.hyperedgelayer2.factor_compose2.proj2.weight', 'htnnlayer.hyperedgelayer2.factor_compose2.proj2.bias', 'htnnlayer.hyperedgelayer2.factor_compose2.encoder.weight', 'htnnlayer.hyperedgelayer2.factor_compose2.encoder.bias', 'htnnlayer.hyperedgelayer2.layernorm1.weight', 'htnnlayer.hyperedgelayer2.layernorm1.bias', 'htnnlayer.hyperedgelayer2.layernorm2.weight', 'htnnlayer.hyperedgelayer2.layernorm2.bias', 'htnnlayer.aggregate.proj_s.weight', 'htnnlayer.aggregate.proj_s.bias', 'htnnlayer.aggregate.proj_o.weight', 'htnnlayer.aggregate.proj_o.bias', 'htnnlayer.aggregate.proj_r.weight', 'htnnlayer.aggregate.proj_r.bias', 'htnnlayer.aggregate.attn_combine_s.0.weight', 'htnnlayer.aggregate.attn_combine_s.0.bias', 'htnnlayer.aggregate.attn_combine_o.0.weight', 'htnnlayer.aggregate.attn_combine_o.0.bias', 'htnnlayer.aggregate.attn_combine_r.0.weight', 'htnnlayer.aggregate.attn_combine_r.0.bias', 'htnnlayer.aggregate.sv.weight', 'htnnlayer.aggregate.ov.weight', 'htnnlayer.aggregate.rv.weight', 'htnnlayer.aggregate.fc_s.weight', 'htnnlayer.aggregate.fc_s.bias', 'htnnlayer.aggregate.fc_o.weight', 'htnnlayer.aggregate.fc_o.bias', 'htnnlayer.aggregate.fc_r.weight', 'htnnlayer.aggregate.fc_r.bias', 'htnnlayer.aggregate.layernorm_s.weight', 'htnnlayer.aggregate.layernorm_s.bias', 'htnnlayer.aggregate.layernorm_o.weight', 'htnnlayer.aggregate.layernorm_o.bias', 'htnnlayer.aggregate.layernorm_r.weight', 'htnnlayer.aggregate.layernorm_r.bias', 'rel_cls.weight', 'rel_cls.bias', 'ner_cls.projection.weight', 'ner_cls.projection.bias', 'sub_layernorm.weight', 'sub_layernorm.bias', 'obj_layernorm.weight', 'obj_layernorm.bias', 'rel_layernorm.weight', 'rel_layernorm.bias']
+2025-11-08 17:41:00,957 [MainThread  ] [INFO ]  Weights from pretrained model not used in BertForHyperGNN: ['cls.predictions.bias', 'cls.predictions.transform.dense.weight', 'cls.predictions.transform.dense.bias', 'cls.predictions.transform.LayerNorm.weight', 'cls.predictions.transform.LayerNorm.bias', 'cls.predictions.decoder.weight', 'cls.predictions.decoder.bias', 'cls.seq_relationship.weight', 'cls.seq_relationship.bias']
+2025-11-08 17:41:00,960 [MainThread  ] [INFO ]   subject_id = 2950, object_id = 2567, mask_id = 104
+2025-11-08 17:41:03,243 [MainThread  ] [INFO ]  Training/evaluation parameters Namespace(data_dir='', model_type='hyper', model_name_or_path='/root/siton-data-guanchunxiangData/fuleihao/SURE/bert_models/scibert_scivocab_uncased', output_dir='saves/HGERE/scire_models/scibert/tersibcop/facencbiaf-seq512-mem400-iter3-layernorm+_attnself/ent400-rel400-lr2e-5-1e-4-bs18-ep30-eps1e-8/Hyper_scierc_scibert-42', ner_prediction_dir='/root/siton-data-guanchunxiangData/fuleihao/HGERE/saves/sciner_models/pruner/biafencoder-spanlen12-rank768-hid768-span256-entnum3-18-lr2e-5/scierc_scibert-42', config_name='', tokenizer_name='', cache_dir='', max_seq_length=512, do_train=True, do_eval=True, do_test=False, evaluate_during_training=True, do_lower_case=True, per_gpu_train_batch_size=18, per_gpu_eval_batch_size=32, gradient_accumulation_steps=1, learning_rate=2e-05, learning_rate_cls=0.0001, weight_decay=0.0, adam_epsilon=1e-08, max_grad_norm=1.0, num_train_epochs=30.0, max_steps=-1, warmup_steps=-1, logging_steps=5, save_steps=1000, eval_epochs=3, eval_all_checkpoints=True, no_cuda=False, overwrite_output_dir=True, overwrite_cache=False, seed=42, fp16=True, fp16_opt_level='O1', local_rank=-1, server_ip='', server_port='', save_total_limit=1, train_file='ent_pred_train.json', dev_file='ent_pred_dev.json', test_file='ent_pred_test.json', max_pair_length=18, alpha=1.0, save_results=False, no_test=False, eval_logsoftmax=False, eval_softmax=False, shuffle=False, lminit=False, no_sym=False, att_left=False, att_right=False, use_ner_results=False, use_typemarker=False, eval_unidirect=False, nocross=False, warmup_ratio=0.1, eval_logits=False, ent_repr='mix', uni_ent=False, ent_enc='cat', pred_sub=False, ner_cls='cat', rel_enc='cat', ent_dim=400, rel_dim=400, rel_rank=200, rel_factorize=False, baseline='firstorder', factor_type='tersibcop', mem_dim=400, iter=3, layernorm=True, layernorm_1st=True, attn_self=True, aggregate_type='attn', aggregate_func='max', agg_with_self=False, fix_obj=False, edgetype='sib', attn_scorer='biaf', attn_res=False, n_head=8, d_head=32, factor_encoder='biaf', iter1=1, hostname='6d13b2829953', n_gpu=1, device=device(type='cuda'), model_path='/root/siton-data-guanchunxiangData/fuleihao/SURE/bert_models/scibert_scivocab_uncased', continue_training=False, global_step=0)
+2025-11-08 17:41:03,248 [MainThread  ] [INFO ]  loading from /root/siton-data-guanchunxiangData/fuleihao/HGERE/saves/sciner_models/pruner/biafencoder-spanlen12-rank768-hid768-span256-entnum3-18-lr2e-5/scierc_scibert-42/ent_pred_train.json
+2025-11-08 17:41:06,535 [MainThread  ] [INFO ]  maxR: 114
+2025-11-08 17:41:06,536 [MainThread  ] [INFO ]  maxL: 391
+2025-11-08 17:43:44,074 [MainThread  ] [WARNI]  Process rank: -1, device: cuda, n_gpu: 1, distributed training: False, 16-bits training: False
+2025-11-08 17:43:44,079 [MainThread  ] [INFO ]  loading configuration file /root/siton-data-guanchunxiangData/fuleihao/SURE/bert_models/scibert_scivocab_uncased/config.json
+2025-11-08 17:43:44,079 [MainThread  ] [INFO ]  Model config BertConfig {
+  "architectures": null,
+  "attention_probs_dropout_prob": 0.1,
+  "bos_token_id": null,
+  "do_sample": false,
+  "eos_token_ids": null,
+  "finetuning_task": null,
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 768,
+  "id2label": {
+    "0": "LABEL_0",
+    "1": "LABEL_1"
+  },
+  "initializer_range": 0.02,
+  "intermediate_size": 3072,
+  "is_decoder": false,
+  "label2id": {
+    "LABEL_0": 0,
+    "LABEL_1": 1
+  },
+  "layer_norm_eps": 1e-12,
+  "length_penalty": 1.0,
+  "max_length": 20,
+  "max_position_embeddings": 512,
+  "model_type": "bert",
+  "num_attention_heads": 12,
+  "num_beams": 1,
+  "num_hidden_layers": 12,
+  "num_labels": 13,
+  "num_return_sequences": 1,
+  "output_attentions": false,
+  "output_hidden_states": false,
+  "output_past": true,
+  "pad_token_id": 0,
+  "pruned_heads": {},
+  "repetition_penalty": 1.0,
+  "temperature": 1.0,
+  "top_k": 50,
+  "top_p": 1.0,
+  "torchscript": false,
+  "type_vocab_size": 2,
+  "use_bfloat16": false,
+  "vocab_size": 31090
+}
+
+2025-11-08 17:43:44,080 [MainThread  ] [INFO ]  Model name '/root/siton-data-guanchunxiangData/fuleihao/SURE/bert_models/scibert_scivocab_uncased' not found in model shortcut name list (bert-base-uncased, bert-large-uncased, bert-base-cased, bert-large-cased, bert-base-multilingual-uncased, bert-base-multilingual-cased, bert-base-chinese, bert-base-german-cased, bert-large-uncased-whole-word-masking, bert-large-cased-whole-word-masking, bert-large-uncased-whole-word-masking-finetuned-squad, bert-large-cased-whole-word-masking-finetuned-squad, bert-base-cased-finetuned-mrpc, bert-base-german-dbmdz-cased, bert-base-german-dbmdz-uncased, bert-base-finnish-cased-v1, bert-base-finnish-uncased-v1, bert-base-dutch-cased). Assuming '/root/siton-data-guanchunxiangData/fuleihao/SURE/bert_models/scibert_scivocab_uncased' is a path, a model identifier, or url to a directory containing tokenizer files.
+2025-11-08 17:43:44,080 [MainThread  ] [INFO ]  Didn't find file /root/siton-data-guanchunxiangData/fuleihao/SURE/bert_models/scibert_scivocab_uncased/added_tokens.json. We won't load it.
+2025-11-08 17:43:44,080 [MainThread  ] [INFO ]  Didn't find file /root/siton-data-guanchunxiangData/fuleihao/SURE/bert_models/scibert_scivocab_uncased/special_tokens_map.json. We won't load it.
+2025-11-08 17:43:44,080 [MainThread  ] [INFO ]  Didn't find file /root/siton-data-guanchunxiangData/fuleihao/SURE/bert_models/scibert_scivocab_uncased/tokenizer_config.json. We won't load it.
+2025-11-08 17:43:44,080 [MainThread  ] [INFO ]  loading file /root/siton-data-guanchunxiangData/fuleihao/SURE/bert_models/scibert_scivocab_uncased/vocab.txt
+2025-11-08 17:43:44,080 [MainThread  ] [INFO ]  loading file None
+2025-11-08 17:43:44,080 [MainThread  ] [INFO ]  loading file None
+2025-11-08 17:43:44,080 [MainThread  ] [INFO ]  loading file None
+2025-11-08 17:43:44,117 [MainThread  ] [INFO ]  loading weights file /root/siton-data-guanchunxiangData/fuleihao/SURE/bert_models/scibert_scivocab_uncased/pytorch_model.bin
+2025-11-08 17:43:46,663 [MainThread  ] [INFO ]  Weights of BertForHyperGNN not initialized from pretrained model: ['sub_encoder.projection.weight', 'sub_encoder.projection.bias', 'obj_encoder.projection.weight', 'obj_encoder.projection.bias', 'rel_encoder.projection.weight', 'rel_encoder.projection.bias', 'htnnlayer.hyperedgelayer1.factor_compose.proj1.weight', 'htnnlayer.hyperedgelayer1.factor_compose.proj1.bias', 'htnnlayer.hyperedgelayer1.factor_compose.proj2.weight', 'htnnlayer.hyperedgelayer1.factor_compose.proj2.bias', 'htnnlayer.hyperedgelayer1.factor_compose.proj3.weight', 'htnnlayer.hyperedgelayer1.factor_compose.proj3.bias', 'htnnlayer.hyperedgelayer1.factor_compose.encode_proj.weight', 'htnnlayer.hyperedgelayer1.factor_compose.encode_proj.bias', 'htnnlayer.hyperedgelayer1.layernorm.weight', 'htnnlayer.hyperedgelayer1.layernorm.bias', 'htnnlayer.hyperedgelayer2.factor_compose1.proj1.weight', 'htnnlayer.hyperedgelayer2.factor_compose1.proj1.bias', 'htnnlayer.hyperedgelayer2.factor_compose1.proj2.weight', 'htnnlayer.hyperedgelayer2.factor_compose1.proj2.bias', 'htnnlayer.hyperedgelayer2.factor_compose1.encoder.weight', 'htnnlayer.hyperedgelayer2.factor_compose1.encoder.bias', 'htnnlayer.hyperedgelayer2.factor_compose2.proj1.weight', 'htnnlayer.hyperedgelayer2.factor_compose2.proj1.bias', 'htnnlayer.hyperedgelayer2.factor_compose2.proj2.weight', 'htnnlayer.hyperedgelayer2.factor_compose2.proj2.bias', 'htnnlayer.hyperedgelayer2.factor_compose2.encoder.weight', 'htnnlayer.hyperedgelayer2.factor_compose2.encoder.bias', 'htnnlayer.hyperedgelayer2.layernorm1.weight', 'htnnlayer.hyperedgelayer2.layernorm1.bias', 'htnnlayer.hyperedgelayer2.layernorm2.weight', 'htnnlayer.hyperedgelayer2.layernorm2.bias', 'htnnlayer.aggregate.proj_s.weight', 'htnnlayer.aggregate.proj_s.bias', 'htnnlayer.aggregate.proj_o.weight', 'htnnlayer.aggregate.proj_o.bias', 'htnnlayer.aggregate.proj_r.weight', 'htnnlayer.aggregate.proj_r.bias', 'htnnlayer.aggregate.attn_combine_s.0.weight', 'htnnlayer.aggregate.attn_combine_s.0.bias', 'htnnlayer.aggregate.attn_combine_o.0.weight', 'htnnlayer.aggregate.attn_combine_o.0.bias', 'htnnlayer.aggregate.attn_combine_r.0.weight', 'htnnlayer.aggregate.attn_combine_r.0.bias', 'htnnlayer.aggregate.sv.weight', 'htnnlayer.aggregate.ov.weight', 'htnnlayer.aggregate.rv.weight', 'htnnlayer.aggregate.fc_s.weight', 'htnnlayer.aggregate.fc_s.bias', 'htnnlayer.aggregate.fc_o.weight', 'htnnlayer.aggregate.fc_o.bias', 'htnnlayer.aggregate.fc_r.weight', 'htnnlayer.aggregate.fc_r.bias', 'htnnlayer.aggregate.layernorm_s.weight', 'htnnlayer.aggregate.layernorm_s.bias', 'htnnlayer.aggregate.layernorm_o.weight', 'htnnlayer.aggregate.layernorm_o.bias', 'htnnlayer.aggregate.layernorm_r.weight', 'htnnlayer.aggregate.layernorm_r.bias', 'rel_cls.weight', 'rel_cls.bias', 'ner_cls.projection.weight', 'ner_cls.projection.bias', 'sub_layernorm.weight', 'sub_layernorm.bias', 'obj_layernorm.weight', 'obj_layernorm.bias', 'rel_layernorm.weight', 'rel_layernorm.bias']
+2025-11-08 17:43:46,663 [MainThread  ] [INFO ]  Weights from pretrained model not used in BertForHyperGNN: ['cls.predictions.bias', 'cls.predictions.transform.dense.weight', 'cls.predictions.transform.dense.bias', 'cls.predictions.transform.LayerNorm.weight', 'cls.predictions.transform.LayerNorm.bias', 'cls.predictions.decoder.weight', 'cls.predictions.decoder.bias', 'cls.seq_relationship.weight', 'cls.seq_relationship.bias']
+2025-11-08 17:43:46,665 [MainThread  ] [INFO ]   subject_id = 2950, object_id = 2567, mask_id = 104
+2025-11-08 17:43:48,451 [MainThread  ] [INFO ]  Training/evaluation parameters Namespace(data_dir='', model_type='hyper', model_name_or_path='/root/siton-data-guanchunxiangData/fuleihao/SURE/bert_models/scibert_scivocab_uncased', output_dir='saves/HGERE/scire_models/scibert/tersibcop/facencbiaf-seq512-mem400-iter3-layernorm+_attnself/ent400-rel400-lr2e-5-1e-4-bs18-ep30-eps1e-8/Hyper_scierc_scibert-42', ner_prediction_dir='/root/siton-data-guanchunxiangData/fuleihao/HGERE/saves/sciner_models/pruner/biafencoder-spanlen12-rank768-hid768-span256-entnum3-18-lr2e-5/scierc_scibert-42', config_name='', tokenizer_name='', cache_dir='', max_seq_length=512, do_train=True, do_eval=True, do_test=False, evaluate_during_training=True, do_lower_case=True, per_gpu_train_batch_size=18, per_gpu_eval_batch_size=32, gradient_accumulation_steps=1, learning_rate=2e-05, learning_rate_cls=0.0001, weight_decay=0.0, adam_epsilon=1e-08, max_grad_norm=1.0, num_train_epochs=30.0, max_steps=-1, warmup_steps=-1, logging_steps=5, save_steps=1000, eval_epochs=3, eval_all_checkpoints=True, no_cuda=False, overwrite_output_dir=True, overwrite_cache=False, seed=42, fp16=False, fp16_opt_level='O1', local_rank=-1, server_ip='', server_port='', save_total_limit=1, train_file='ent_pred_train.json', dev_file='ent_pred_dev.json', test_file='ent_pred_test.json', max_pair_length=18, alpha=1.0, save_results=False, no_test=False, eval_logsoftmax=False, eval_softmax=False, shuffle=False, lminit=False, no_sym=False, att_left=False, att_right=False, use_ner_results=False, use_typemarker=False, eval_unidirect=False, nocross=False, warmup_ratio=0.1, eval_logits=False, ent_repr='mix', uni_ent=False, ent_enc='cat', pred_sub=False, ner_cls='cat', rel_enc='cat', ent_dim=400, rel_dim=400, rel_rank=200, rel_factorize=False, baseline='firstorder', factor_type='tersibcop', mem_dim=400, iter=3, layernorm=True, layernorm_1st=True, attn_self=True, aggregate_type='attn', aggregate_func='max', agg_with_self=False, fix_obj=False, edgetype='sib', attn_scorer='biaf', attn_res=False, n_head=8, d_head=32, factor_encoder='biaf', iter1=1, hostname='6d13b2829953', n_gpu=1, device=device(type='cuda'), model_path='/root/siton-data-guanchunxiangData/fuleihao/SURE/bert_models/scibert_scivocab_uncased', continue_training=False, global_step=0)
+2025-11-08 17:43:48,456 [MainThread  ] [INFO ]  loading from /root/siton-data-guanchunxiangData/fuleihao/HGERE/saves/sciner_models/pruner/biafencoder-spanlen12-rank768-hid768-span256-entnum3-18-lr2e-5/scierc_scibert-42/ent_pred_train.json
+2025-11-08 17:43:51,741 [MainThread  ] [INFO ]  maxR: 114
+2025-11-08 17:43:51,741 [MainThread  ] [INFO ]  maxL: 391
+2025-11-08 17:43:51,744 [MainThread  ] [INFO ]  ***** Running training *****
+2025-11-08 17:43:51,744 [MainThread  ] [INFO ]    Num examples = 1861
+2025-11-08 17:43:51,744 [MainThread  ] [INFO ]    Num Epochs = 30
+2025-11-08 17:43:51,744 [MainThread  ] [INFO ]    Instantaneous batch size per GPU = 18
+2025-11-08 17:43:51,744 [MainThread  ] [INFO ]    Total train batch size (w. parallel, distributed & accumulation) = 18
+2025-11-08 17:43:51,744 [MainThread  ] [INFO ]    Gradient Accumulation steps = 1
+2025-11-08 17:43:51,744 [MainThread  ] [INFO ]    Total optimization steps = 28020
+2025-11-08 17:43:51,744 [MainThread  ] [INFO ]    Eval steps = 2802
+2025-11-08 17:43:51,746 [MainThread  ] [INFO ]  >>> Epoch 0 starts.
+2025-11-08 17:56:44,659 [MainThread  ] [INFO ]  >>> current global steps: 934
+2025-11-08 17:56:44,659 [MainThread  ] [INFO ]  >>> lr of epoch 0: 6.6667e-06
+2025-11-08 17:56:44,659 [MainThread  ] [INFO ]  >>> Average loss of epoch0: ner_1.075592, re_0.488460
+2025-11-08 17:56:44,659 [MainThread  ] [INFO ]  >>> Epoch 1 starts.
+2025-11-08 18:07:01,743 [MainThread  ] [INFO ]  >>> current global steps: 1868
+2025-11-08 18:07:01,743 [MainThread  ] [INFO ]  >>> lr of epoch 1: 1.3333e-05
+2025-11-08 18:07:01,743 [MainThread  ] [INFO ]  >>> Average loss of epoch1: ner_0.595668, re_0.269367
+2025-11-08 18:07:01,744 [MainThread  ] [INFO ]  >>> Epoch 2 starts.
+2025-11-08 18:18:33,058 [MainThread  ] [INFO ]  evaluate dev file.
+2025-11-08 18:18:33,059 [MainThread  ] [INFO ]  ***** Running evaluation  *****
+2025-11-08 18:18:33,060 [MainThread  ] [INFO ]    Batch size = 32
+2025-11-08 18:18:33,061 [MainThread  ] [INFO ]  loading from /root/siton-data-guanchunxiangData/fuleihao/HGERE/saves/sciner_models/pruner/biafencoder-spanlen12-rank768-hid768-span256-entnum3-18-lr2e-5/scierc_scibert-42/ent_pred_dev.json
+2025-11-08 18:18:33,461 [MainThread  ] [INFO ]  maxR: 108
+2025-11-08 18:18:33,462 [MainThread  ] [INFO ]  maxL: 293
+2025-11-08 18:18:33,462 [MainThread  ] [INFO ]    Num examples = 275
+2025-11-08 18:19:16,891 [MainThread  ] [INFO ]    Evaluation done in total 43.428765 secs (6.332209 example per second)
+2025-11-08 18:19:16,892 [MainThread  ] [INFO ]  Result:ner_p:0.7228, ner_r:0.7201, ner_f1:0.7214; rel_p:0.4762, rel_r:0.0879, rel_f1:0.1484; rel_p+:0.3690, rel_r+:0.0681, rel_f1+:0.1150
+2025-11-08 18:19:16,901 [MainThread  ] [INFO ]  Configuration saved in saves/HGERE/scire_models/scibert/tersibcop/facencbiaf-seq512-mem400-iter3-layernorm+_attnself/ent400-rel400-lr2e-5-1e-4-bs18-ep30-eps1e-8/Hyper_scierc_scibert-42/checkpoint-2802/config.json
+2025-11-08 18:19:17,924 [MainThread  ] [INFO ]  Model weights saved in saves/HGERE/scire_models/scibert/tersibcop/facencbiaf-seq512-mem400-iter3-layernorm+_attnself/ent400-rel400-lr2e-5-1e-4-bs18-ep30-eps1e-8/Hyper_scierc_scibert-42/checkpoint-2802/pytorch_model.bin
+2025-11-08 18:19:20,108 [MainThread  ] [INFO ]  Saving model checkpoint to saves/HGERE/scire_models/scibert/tersibcop/facencbiaf-seq512-mem400-iter3-layernorm+_attnself/ent400-rel400-lr2e-5-1e-4-bs18-ep30-eps1e-8/Hyper_scierc_scibert-42/checkpoint-2802
+2025-11-08 18:19:20,120 [MainThread  ] [INFO ]  >>> current global steps: 2802
+2025-11-08 18:19:20,121 [MainThread  ] [INFO ]  >>> lr of epoch 2: 2.0000e-05
+2025-11-08 18:19:20,121 [MainThread  ] [INFO ]  >>> Average loss of epoch2: ner_0.389344, re_0.222517
+2025-11-08 18:19:20,122 [MainThread  ] [INFO ]  >>> Epoch 3 starts.
+2025-11-08 18:30:52,353 [MainThread  ] [INFO ]  >>> current global steps: 3736
+2025-11-08 18:30:52,353 [MainThread  ] [INFO ]  >>> lr of epoch 3: 1.9259e-05
+2025-11-08 18:30:52,353 [MainThread  ] [INFO ]  >>> Average loss of epoch3: ner_0.240141, re_0.191903
+2025-11-08 18:30:52,353 [MainThread  ] [INFO ]  >>> Epoch 4 starts.
+2025-11-08 18:41:08,663 [MainThread  ] [INFO ]  >>> current global steps: 4670
+2025-11-08 18:41:08,664 [MainThread  ] [INFO ]  >>> lr of epoch 4: 1.8519e-05
+2025-11-08 18:41:08,664 [MainThread  ] [INFO ]  >>> Average loss of epoch4: ner_0.149176, re_0.160465
+2025-11-08 18:41:08,664 [MainThread  ] [INFO ]  >>> Epoch 5 starts.
+2025-11-08 18:54:11,028 [MainThread  ] [INFO ]  evaluate dev file.
+2025-11-08 18:54:11,029 [MainThread  ] [INFO ]  ***** Running evaluation  *****
+2025-11-08 18:54:11,029 [MainThread  ] [INFO ]    Batch size = 32
+2025-11-08 18:54:11,030 [MainThread  ] [INFO ]  loading from /root/siton-data-guanchunxiangData/fuleihao/HGERE/saves/sciner_models/pruner/biafencoder-spanlen12-rank768-hid768-span256-entnum3-18-lr2e-5/scierc_scibert-42/ent_pred_dev.json
+2025-11-08 18:54:11,642 [MainThread  ] [INFO ]  maxR: 108
+2025-11-08 18:54:11,642 [MainThread  ] [INFO ]  maxL: 293
+2025-11-08 18:54:11,643 [MainThread  ] [INFO ]    Num examples = 275
+2025-11-08 18:54:45,782 [MainThread  ] [INFO ]    Evaluation done in total 34.138747 secs (8.055363 example per second)
+2025-11-08 18:54:45,782 [MainThread  ] [INFO ]  Result:ner_p:0.7278, ner_r:0.7386, ner_f1:0.7332; rel_p:0.5431, rel_r:0.3187, rel_f1:0.4017; rel_p+:0.4569, rel_r+:0.2681, rel_f1+:0.3380
+2025-11-08 18:54:45,791 [MainThread  ] [INFO ]  Configuration saved in saves/HGERE/scire_models/scibert/tersibcop/facencbiaf-seq512-mem400-iter3-layernorm+_attnself/ent400-rel400-lr2e-5-1e-4-bs18-ep30-eps1e-8/Hyper_scierc_scibert-42/checkpoint-5604/config.json
+2025-11-08 18:54:46,746 [MainThread  ] [INFO ]  Model weights saved in saves/HGERE/scire_models/scibert/tersibcop/facencbiaf-seq512-mem400-iter3-layernorm+_attnself/ent400-rel400-lr2e-5-1e-4-bs18-ep30-eps1e-8/Hyper_scierc_scibert-42/checkpoint-5604/pytorch_model.bin
+2025-11-08 18:54:48,652 [MainThread  ] [INFO ]  Saving model checkpoint to saves/HGERE/scire_models/scibert/tersibcop/facencbiaf-seq512-mem400-iter3-layernorm+_attnself/ent400-rel400-lr2e-5-1e-4-bs18-ep30-eps1e-8/Hyper_scierc_scibert-42/checkpoint-5604
+2025-11-08 18:54:48,653 [MainThread  ] [INFO ]  Deleting older checkpoint [saves/HGERE/scire_models/scibert/tersibcop/facencbiaf-seq512-mem400-iter3-layernorm+_attnself/ent400-rel400-lr2e-5-1e-4-bs18-ep30-eps1e-8/Hyper_scierc_scibert-42/checkpoint-2802] due to args.save_total_limit
+2025-11-08 18:54:49,033 [MainThread  ] [INFO ]  >>> current global steps: 5604
+2025-11-08 18:54:49,033 [MainThread  ] [INFO ]  >>> lr of epoch 5: 1.7778e-05
+2025-11-08 18:54:49,033 [MainThread  ] [INFO ]  >>> Average loss of epoch5: ner_0.085882, re_0.117038
+2025-11-08 18:54:49,033 [MainThread  ] [INFO ]  >>> Epoch 6 starts.
+2025-11-08 19:04:54,352 [MainThread  ] [INFO ]  >>> current global steps: 6538
+2025-11-08 19:04:54,352 [MainThread  ] [INFO ]  >>> lr of epoch 6: 1.7037e-05
+2025-11-08 19:04:54,352 [MainThread  ] [INFO ]  >>> Average loss of epoch6: ner_0.057392, re_0.084859
+2025-11-08 19:04:54,353 [MainThread  ] [INFO ]  >>> Epoch 7 starts.
+2025-11-08 19:18:02,456 [MainThread  ] [INFO ]  >>> current global steps: 7472
+2025-11-08 19:18:02,457 [MainThread  ] [INFO ]  >>> lr of epoch 7: 1.6296e-05
+2025-11-08 19:18:02,457 [MainThread  ] [INFO ]  >>> Average loss of epoch7: ner_0.034408, re_0.063677
+2025-11-08 19:18:02,457 [MainThread  ] [INFO ]  >>> Epoch 8 starts.
+2025-11-08 19:28:20,414 [MainThread  ] [INFO ]  evaluate dev file.
+2025-11-08 19:28:20,416 [MainThread  ] [INFO ]  ***** Running evaluation  *****
+2025-11-08 19:28:20,416 [MainThread  ] [INFO ]    Batch size = 32
+2025-11-08 19:28:20,419 [MainThread  ] [INFO ]  loading from /root/siton-data-guanchunxiangData/fuleihao/HGERE/saves/sciner_models/pruner/biafencoder-spanlen12-rank768-hid768-span256-entnum3-18-lr2e-5/scierc_scibert-42/ent_pred_dev.json
+2025-11-08 19:28:20,808 [MainThread  ] [INFO ]  maxR: 108
+2025-11-08 19:28:20,809 [MainThread  ] [INFO ]  maxL: 293
+2025-11-08 19:28:20,811 [MainThread  ] [INFO ]    Num examples = 275
+2025-11-08 19:28:49,182 [MainThread  ] [INFO ]    Evaluation done in total 28.370572 secs (9.693143 example per second)
+2025-11-08 19:28:49,182 [MainThread  ] [INFO ]  Result:ner_p:0.7457, ner_r:0.7448, ner_f1:0.7452; rel_p:0.5971, rel_r:0.4527, rel_f1:0.5150; rel_p+:0.4957, rel_r+:0.3758, rel_f1+:0.4275
+2025-11-08 19:28:49,191 [MainThread  ] [INFO ]  Configuration saved in saves/HGERE/scire_models/scibert/tersibcop/facencbiaf-seq512-mem400-iter3-layernorm+_attnself/ent400-rel400-lr2e-5-1e-4-bs18-ep30-eps1e-8/Hyper_scierc_scibert-42/checkpoint-8406/config.json
+2025-11-08 19:28:50,159 [MainThread  ] [INFO ]  Model weights saved in saves/HGERE/scire_models/scibert/tersibcop/facencbiaf-seq512-mem400-iter3-layernorm+_attnself/ent400-rel400-lr2e-5-1e-4-bs18-ep30-eps1e-8/Hyper_scierc_scibert-42/checkpoint-8406/pytorch_model.bin
+2025-11-08 19:28:52,011 [MainThread  ] [INFO ]  Saving model checkpoint to saves/HGERE/scire_models/scibert/tersibcop/facencbiaf-seq512-mem400-iter3-layernorm+_attnself/ent400-rel400-lr2e-5-1e-4-bs18-ep30-eps1e-8/Hyper_scierc_scibert-42/checkpoint-8406
+2025-11-08 19:28:52,020 [MainThread  ] [INFO ]  Deleting older checkpoint [saves/HGERE/scire_models/scibert/tersibcop/facencbiaf-seq512-mem400-iter3-layernorm+_attnself/ent400-rel400-lr2e-5-1e-4-bs18-ep30-eps1e-8/Hyper_scierc_scibert-42/checkpoint-5604] due to args.save_total_limit
+2025-11-08 19:28:52,569 [MainThread  ] [INFO ]  >>> current global steps: 8406
+2025-11-08 19:28:52,570 [MainThread  ] [INFO ]  >>> lr of epoch 8: 1.5556e-05
+2025-11-08 19:28:52,570 [MainThread  ] [INFO ]  >>> Average loss of epoch8: ner_0.025806, re_0.046660
+2025-11-08 19:28:52,570 [MainThread  ] [INFO ]  >>> Epoch 9 starts.
+2025-11-08 19:40:59,559 [MainThread  ] [INFO ]  >>> current global steps: 9340
+2025-11-08 19:40:59,560 [MainThread  ] [INFO ]  >>> lr of epoch 9: 1.4815e-05
+2025-11-08 19:40:59,560 [MainThread  ] [INFO ]  >>> Average loss of epoch9: ner_0.026273, re_0.033114
+2025-11-08 19:40:59,560 [MainThread  ] [INFO ]  >>> Epoch 10 starts.
+2025-11-08 19:52:02,237 [MainThread  ] [INFO ]  >>> current global steps: 10274
+2025-11-08 19:52:02,237 [MainThread  ] [INFO ]  >>> lr of epoch 10: 1.4074e-05
+2025-11-08 19:52:02,237 [MainThread  ] [INFO ]  >>> Average loss of epoch10: ner_0.019650, re_0.025665
+2025-11-08 19:52:02,237 [MainThread  ] [INFO ]  >>> Epoch 11 starts.
+2025-11-08 20:02:49,252 [MainThread  ] [INFO ]  evaluate dev file.
+2025-11-08 20:02:49,253 [MainThread  ] [INFO ]  ***** Running evaluation  *****
+2025-11-08 20:02:49,253 [MainThread  ] [INFO ]    Batch size = 32
+2025-11-08 20:02:49,254 [MainThread  ] [INFO ]  loading from /root/siton-data-guanchunxiangData/fuleihao/HGERE/saves/sciner_models/pruner/biafencoder-spanlen12-rank768-hid768-span256-entnum3-18-lr2e-5/scierc_scibert-42/ent_pred_dev.json
+2025-11-08 20:02:49,680 [MainThread  ] [INFO ]  maxR: 108
+2025-11-08 20:02:49,680 [MainThread  ] [INFO ]  maxL: 293
+2025-11-08 20:02:49,681 [MainThread  ] [INFO ]    Num examples = 275
+2025-11-08 20:03:30,169 [MainThread  ] [INFO ]    Evaluation done in total 40.487329 secs (6.792248 example per second)
+2025-11-08 20:03:30,169 [MainThread  ] [INFO ]  Result:ner_p:0.7406, ner_r:0.7534, ner_f1:0.7469; rel_p:0.5854, rel_r:0.5121, rel_f1:0.5463; rel_p+:0.5151, rel_r+:0.4505, rel_f1+:0.4807
+2025-11-08 20:03:30,176 [MainThread  ] [INFO ]  Configuration saved in saves/HGERE/scire_models/scibert/tersibcop/facencbiaf-seq512-mem400-iter3-layernorm+_attnself/ent400-rel400-lr2e-5-1e-4-bs18-ep30-eps1e-8/Hyper_scierc_scibert-42/checkpoint-11208/config.json
+2025-11-08 20:03:31,285 [MainThread  ] [INFO ]  Model weights saved in saves/HGERE/scire_models/scibert/tersibcop/facencbiaf-seq512-mem400-iter3-layernorm+_attnself/ent400-rel400-lr2e-5-1e-4-bs18-ep30-eps1e-8/Hyper_scierc_scibert-42/checkpoint-11208/pytorch_model.bin
+2025-11-08 20:03:33,503 [MainThread  ] [INFO ]  Saving model checkpoint to saves/HGERE/scire_models/scibert/tersibcop/facencbiaf-seq512-mem400-iter3-layernorm+_attnself/ent400-rel400-lr2e-5-1e-4-bs18-ep30-eps1e-8/Hyper_scierc_scibert-42/checkpoint-11208
+2025-11-08 20:03:33,514 [MainThread  ] [INFO ]  Deleting older checkpoint [saves/HGERE/scire_models/scibert/tersibcop/facencbiaf-seq512-mem400-iter3-layernorm+_attnself/ent400-rel400-lr2e-5-1e-4-bs18-ep30-eps1e-8/Hyper_scierc_scibert-42/checkpoint-8406] due to args.save_total_limit
+2025-11-08 20:03:33,866 [MainThread  ] [INFO ]  >>> current global steps: 11208
+2025-11-08 20:03:33,866 [MainThread  ] [INFO ]  >>> lr of epoch 11: 1.3333e-05
+2025-11-08 20:03:33,866 [MainThread  ] [INFO ]  >>> Average loss of epoch11: ner_0.014424, re_0.019228
+2025-11-08 20:03:33,866 [MainThread  ] [INFO ]  >>> Epoch 12 starts.
+2025-11-08 20:15:53,953 [MainThread  ] [INFO ]  >>> current global steps: 12142
+2025-11-08 20:15:53,953 [MainThread  ] [INFO ]  >>> lr of epoch 12: 1.2593e-05
+2025-11-08 20:15:53,953 [MainThread  ] [INFO ]  >>> Average loss of epoch12: ner_0.014299, re_0.015059
+2025-11-08 20:15:53,953 [MainThread  ] [INFO ]  >>> Epoch 13 starts.
+2025-11-08 20:25:32,047 [MainThread  ] [INFO ]  >>> current global steps: 13076
+2025-11-08 20:25:32,047 [MainThread  ] [INFO ]  >>> lr of epoch 13: 1.1852e-05
+2025-11-08 20:25:32,048 [MainThread  ] [INFO ]  >>> Average loss of epoch13: ner_0.011607, re_0.010812
+2025-11-08 20:25:32,048 [MainThread  ] [INFO ]  >>> Epoch 14 starts.
+2025-11-08 20:38:16,491 [MainThread  ] [INFO ]  evaluate dev file.
+2025-11-08 20:38:16,492 [MainThread  ] [INFO ]  ***** Running evaluation  *****
+2025-11-08 20:38:16,492 [MainThread  ] [INFO ]    Batch size = 32
+2025-11-08 20:38:16,493 [MainThread  ] [INFO ]  loading from /root/siton-data-guanchunxiangData/fuleihao/HGERE/saves/sciner_models/pruner/biafencoder-spanlen12-rank768-hid768-span256-entnum3-18-lr2e-5/scierc_scibert-42/ent_pred_dev.json
+2025-11-08 20:38:16,903 [MainThread  ] [INFO ]  maxR: 108
+2025-11-08 20:38:16,903 [MainThread  ] [INFO ]  maxL: 293
+2025-11-08 20:38:16,906 [MainThread  ] [INFO ]    Num examples = 275
+2025-11-08 20:38:59,848 [MainThread  ] [INFO ]    Evaluation done in total 42.941097 secs (6.404121 example per second)
+2025-11-08 20:38:59,848 [MainThread  ] [INFO ]  Result:ner_p:0.7409, ner_r:0.7546, ner_f1:0.7477; rel_p:0.5984, rel_r:0.4813, rel_f1:0.5335; rel_p+:0.4891, rel_r+:0.3934, rel_f1+:0.4361
+2025-11-08 20:38:59,853 [MainThread  ] [INFO ]  >>> current global steps: 14010
+2025-11-08 20:38:59,853 [MainThread  ] [INFO ]  >>> lr of epoch 14: 1.1111e-05
+2025-11-08 20:38:59,853 [MainThread  ] [INFO ]  >>> Average loss of epoch14: ner_0.009314, re_0.009292
+2025-11-08 20:38:59,854 [MainThread  ] [INFO ]  >>> Epoch 15 starts.
+2025-11-08 20:49:18,454 [MainThread  ] [INFO ]  >>> current global steps: 14944
+2025-11-08 20:49:18,455 [MainThread  ] [INFO ]  >>> lr of epoch 15: 1.0370e-05
+2025-11-08 20:49:18,455 [MainThread  ] [INFO ]  >>> Average loss of epoch15: ner_0.006595, re_0.007697
+2025-11-08 20:49:18,455 [MainThread  ] [INFO ]  >>> Epoch 16 starts.
+2025-11-08 21:00:48,481 [MainThread  ] [INFO ]  >>> current global steps: 15878
+2025-11-08 21:00:48,481 [MainThread  ] [INFO ]  >>> lr of epoch 16: 9.6296e-06
+2025-11-08 21:00:48,481 [MainThread  ] [INFO ]  >>> Average loss of epoch16: ner_0.005844, re_0.006067
+2025-11-08 21:00:48,481 [MainThread  ] [INFO ]  >>> Epoch 17 starts.
+2025-11-08 21:12:28,455 [MainThread  ] [INFO ]  evaluate dev file.
+2025-11-08 21:12:28,455 [MainThread  ] [INFO ]  ***** Running evaluation  *****
+2025-11-08 21:12:28,455 [MainThread  ] [INFO ]    Batch size = 32
+2025-11-08 21:12:28,457 [MainThread  ] [INFO ]  loading from /root/siton-data-guanchunxiangData/fuleihao/HGERE/saves/sciner_models/pruner/biafencoder-spanlen12-rank768-hid768-span256-entnum3-18-lr2e-5/scierc_scibert-42/ent_pred_dev.json
+2025-11-08 21:12:28,881 [MainThread  ] [INFO ]  maxR: 108
+2025-11-08 21:12:28,881 [MainThread  ] [INFO ]  maxL: 293
+2025-11-08 21:12:28,882 [MainThread  ] [INFO ]    Num examples = 275
+2025-11-08 21:12:57,764 [MainThread  ] [INFO ]    Evaluation done in total 28.882387 secs (9.521374 example per second)
+2025-11-08 21:12:57,765 [MainThread  ] [INFO ]  Result:ner_p:0.7259, ner_r:0.7707, ner_f1:0.7476; rel_p:0.5583, rel_r:0.5055, rel_f1:0.5306; rel_p+:0.4612, rel_r+:0.4176, rel_f1+:0.4383
+2025-11-08 21:12:57,769 [MainThread  ] [INFO ]  >>> current global steps: 16812
+2025-11-08 21:12:57,769 [MainThread  ] [INFO ]  >>> lr of epoch 17: 8.8889e-06
+2025-11-08 21:12:57,769 [MainThread  ] [INFO ]  >>> Average loss of epoch17: ner_0.004090, re_0.005348
+2025-11-08 21:12:57,770 [MainThread  ] [INFO ]  >>> Epoch 18 starts.
+2025-11-08 21:23:45,327 [MainThread  ] [INFO ]  >>> current global steps: 17746
+2025-11-08 21:23:45,328 [MainThread  ] [INFO ]  >>> lr of epoch 18: 8.1481e-06
+2025-11-08 21:23:45,328 [MainThread  ] [INFO ]  >>> Average loss of epoch18: ner_0.002977, re_0.003642
+2025-11-08 21:23:45,328 [MainThread  ] [INFO ]  >>> Epoch 19 starts.
+2025-11-08 21:36:31,244 [MainThread  ] [INFO ]  >>> current global steps: 18680
+2025-11-08 21:36:31,244 [MainThread  ] [INFO ]  >>> lr of epoch 19: 7.4074e-06
+2025-11-08 21:36:31,244 [MainThread  ] [INFO ]  >>> Average loss of epoch19: ner_0.003299, re_0.002867
+2025-11-08 21:36:31,244 [MainThread  ] [INFO ]  >>> Epoch 20 starts.
+2025-11-08 21:46:09,450 [MainThread  ] [INFO ]  evaluate dev file.
+2025-11-08 21:46:09,451 [MainThread  ] [INFO ]  ***** Running evaluation  *****
+2025-11-08 21:46:09,451 [MainThread  ] [INFO ]    Batch size = 32
+2025-11-08 21:46:09,452 [MainThread  ] [INFO ]  loading from /root/siton-data-guanchunxiangData/fuleihao/HGERE/saves/sciner_models/pruner/biafencoder-spanlen12-rank768-hid768-span256-entnum3-18-lr2e-5/scierc_scibert-42/ent_pred_dev.json
+2025-11-08 21:46:10,103 [MainThread  ] [INFO ]  maxR: 108
+2025-11-08 21:46:10,103 [MainThread  ] [INFO ]  maxL: 293
+2025-11-08 21:46:10,105 [MainThread  ] [INFO ]    Num examples = 275
+2025-11-08 21:46:38,193 [MainThread  ] [INFO ]    Evaluation done in total 28.088010 secs (9.790655 example per second)
+2025-11-08 21:46:38,194 [MainThread  ] [INFO ]  Result:ner_p:0.7461, ner_r:0.7645, ner_f1:0.7552; rel_p:0.5881, rel_r:0.5648, rel_f1:0.5762; rel_p+:0.4874, rel_r+:0.4681, rel_f1+:0.4776
+2025-11-08 21:46:38,198 [MainThread  ] [INFO ]  >>> current global steps: 19614
+2025-11-08 21:46:38,199 [MainThread  ] [INFO ]  >>> lr of epoch 20: 6.6667e-06
+2025-11-08 21:46:38,199 [MainThread  ] [INFO ]  >>> Average loss of epoch20: ner_0.001853, re_0.002541
+2025-11-08 21:46:38,199 [MainThread  ] [INFO ]  >>> Epoch 21 starts.
+2025-11-08 21:59:16,658 [MainThread  ] [INFO ]  >>> current global steps: 20548
+2025-11-08 21:59:16,658 [MainThread  ] [INFO ]  >>> lr of epoch 21: 5.9259e-06
+2025-11-08 21:59:16,658 [MainThread  ] [INFO ]  >>> Average loss of epoch21: ner_0.000918, re_0.002176
+2025-11-08 21:59:16,659 [MainThread  ] [INFO ]  >>> Epoch 22 starts.
+2025-11-08 22:09:37,143 [MainThread  ] [INFO ]  >>> current global steps: 21482
+2025-11-08 22:09:37,143 [MainThread  ] [INFO ]  >>> lr of epoch 22: 5.1852e-06
+2025-11-08 22:09:37,143 [MainThread  ] [INFO ]  >>> Average loss of epoch22: ner_0.000777, re_0.001292
+2025-11-08 22:09:37,143 [MainThread  ] [INFO ]  >>> Epoch 23 starts.
+2025-11-08 22:21:09,153 [MainThread  ] [INFO ]  evaluate dev file.
+2025-11-08 22:21:09,154 [MainThread  ] [INFO ]  ***** Running evaluation  *****
+2025-11-08 22:21:09,155 [MainThread  ] [INFO ]    Batch size = 32
+2025-11-08 22:21:09,156 [MainThread  ] [INFO ]  loading from /root/siton-data-guanchunxiangData/fuleihao/HGERE/saves/sciner_models/pruner/biafencoder-spanlen12-rank768-hid768-span256-entnum3-18-lr2e-5/scierc_scibert-42/ent_pred_dev.json
+2025-11-08 22:21:09,573 [MainThread  ] [INFO ]  maxR: 108
+2025-11-08 22:21:09,573 [MainThread  ] [INFO ]  maxL: 293
+2025-11-08 22:21:09,576 [MainThread  ] [INFO ]    Num examples = 275
+2025-11-08 22:21:52,116 [MainThread  ] [INFO ]    Evaluation done in total 42.539243 secs (6.464619 example per second)
+2025-11-08 22:21:52,117 [MainThread  ] [INFO ]  Result:ner_p:0.7497, ner_r:0.7793, ner_f1:0.7642; rel_p:0.5684, rel_r:0.5385, rel_f1:0.5530; rel_p+:0.4710, rel_r+:0.4462, rel_f1+:0.4582
+2025-11-08 22:21:52,127 [MainThread  ] [INFO ]  >>> current global steps: 22416
+2025-11-08 22:21:52,128 [MainThread  ] [INFO ]  >>> lr of epoch 23: 4.4444e-06
+2025-11-08 22:21:52,128 [MainThread  ] [INFO ]  >>> Average loss of epoch23: ner_0.002063, re_0.001145
+2025-11-08 22:21:52,128 [MainThread  ] [INFO ]  >>> Epoch 24 starts.
+2025-11-08 22:33:35,428 [MainThread  ] [INFO ]  >>> current global steps: 23350
+2025-11-08 22:33:35,428 [MainThread  ] [INFO ]  >>> lr of epoch 24: 3.7037e-06
+2025-11-08 22:33:35,428 [MainThread  ] [INFO ]  >>> Average loss of epoch24: ner_0.000535, re_0.000805
+2025-11-08 22:33:35,429 [MainThread  ] [INFO ]  >>> Epoch 25 starts.
+2025-11-08 22:43:41,956 [MainThread  ] [INFO ]  >>> current global steps: 24284
+2025-11-08 22:43:41,956 [MainThread  ] [INFO ]  >>> lr of epoch 25: 2.9630e-06
+2025-11-08 22:43:41,956 [MainThread  ] [INFO ]  >>> Average loss of epoch25: ner_0.000064, re_0.000717
+2025-11-08 22:43:41,956 [MainThread  ] [INFO ]  >>> Epoch 26 starts.
+2025-11-08 22:56:40,459 [MainThread  ] [INFO ]  evaluate dev file.
+2025-11-08 22:56:40,459 [MainThread  ] [INFO ]  ***** Running evaluation  *****
+2025-11-08 22:56:40,459 [MainThread  ] [INFO ]    Batch size = 32
+2025-11-08 22:56:40,461 [MainThread  ] [INFO ]  loading from /root/siton-data-guanchunxiangData/fuleihao/HGERE/saves/sciner_models/pruner/biafencoder-spanlen12-rank768-hid768-span256-entnum3-18-lr2e-5/scierc_scibert-42/ent_pred_dev.json
+2025-11-08 22:56:41,083 [MainThread  ] [INFO ]  maxR: 108
+2025-11-08 22:56:41,084 [MainThread  ] [INFO ]  maxL: 293
+2025-11-08 22:56:41,084 [MainThread  ] [INFO ]    Num examples = 275
+2025-11-08 22:57:21,586 [MainThread  ] [INFO ]    Evaluation done in total 40.501358 secs (6.789896 example per second)
+2025-11-08 22:57:21,586 [MainThread  ] [INFO ]  Result:ner_p:0.7518, ner_r:0.7694, ner_f1:0.7605; rel_p:0.6051, rel_r:0.5253, rel_f1:0.5624; rel_p+:0.5063, rel_r+:0.4396, rel_f1+:0.4706
+2025-11-08 22:57:21,589 [MainThread  ] [INFO ]  >>> current global steps: 25218
+2025-11-08 22:57:21,590 [MainThread  ] [INFO ]  >>> lr of epoch 26: 2.2222e-06
+2025-11-08 22:57:21,590 [MainThread  ] [INFO ]  >>> Average loss of epoch26: ner_0.002477, re_0.000749
+2025-11-08 22:57:21,590 [MainThread  ] [INFO ]  >>> Epoch 27 starts.
+2025-11-08 23:07:06,077 [MainThread  ] [INFO ]  >>> current global steps: 26152
+2025-11-08 23:07:06,077 [MainThread  ] [INFO ]  >>> lr of epoch 27: 1.4815e-06
+2025-11-08 23:07:06,077 [MainThread  ] [INFO ]  >>> Average loss of epoch27: ner_0.000054, re_0.000267
+2025-11-08 23:07:06,077 [MainThread  ] [INFO ]  >>> Epoch 28 starts.
+2025-11-08 23:19:09,452 [MainThread  ] [INFO ]  >>> current global steps: 27086
+2025-11-08 23:19:09,453 [MainThread  ] [INFO ]  >>> lr of epoch 28: 7.4074e-07
+2025-11-08 23:19:09,453 [MainThread  ] [INFO ]  >>> Average loss of epoch28: ner_0.000004, re_0.000213
+2025-11-08 23:19:09,453 [MainThread  ] [INFO ]  >>> Epoch 29 starts.
+2025-11-08 23:30:10,228 [MainThread  ] [INFO ]  evaluate dev file.
+2025-11-08 23:30:10,228 [MainThread  ] [INFO ]  ***** Running evaluation  *****
+2025-11-08 23:30:10,228 [MainThread  ] [INFO ]    Batch size = 32
+2025-11-08 23:30:10,229 [MainThread  ] [INFO ]  loading from /root/siton-data-guanchunxiangData/fuleihao/HGERE/saves/sciner_models/pruner/biafencoder-spanlen12-rank768-hid768-span256-entnum3-18-lr2e-5/scierc_scibert-42/ent_pred_dev.json
+2025-11-08 23:30:10,627 [MainThread  ] [INFO ]  maxR: 108
+2025-11-08 23:30:10,627 [MainThread  ] [INFO ]  maxL: 293
+2025-11-08 23:30:10,628 [MainThread  ] [INFO ]    Num examples = 275
+2025-11-08 23:30:39,392 [MainThread  ] [INFO ]    Evaluation done in total 28.764327 secs (9.560453 example per second)
+2025-11-08 23:30:39,393 [MainThread  ] [INFO ]  Result:ner_p:0.7518, ner_r:0.7842, ner_f1:0.7677; rel_p:0.5764, rel_r:0.5473, rel_f1:0.5614; rel_p+:0.4884, rel_r+:0.4637, rel_f1+:0.4758
+2025-11-08 23:30:39,398 [MainThread  ] [INFO ]  >>> current global steps: 28020
+2025-11-08 23:30:39,398 [MainThread  ] [INFO ]  >>> lr of epoch 29: 0.0000e+00
+2025-11-08 23:30:39,398 [MainThread  ] [INFO ]  >>> Average loss of epoch29: ner_0.000005, re_0.000096
+2025-11-08 23:30:39,401 [MainThread  ] [INFO ]   global_step = 28020, average loss = 0.15247569796795216
+2025-11-08 23:30:39,402 [MainThread  ] [INFO ]  ==========Evaluate the following checkpoints: ['saves/HGERE/scire_models/scibert/tersibcop/facencbiaf-seq512-mem400-iter3-layernorm+_attnself/ent400-rel400-lr2e-5-1e-4-bs18-ep30-eps1e-8/Hyper_scierc_scibert-42/checkpoint-11208']
+2025-11-08 23:30:39,402 [MainThread  ] [INFO ]  loading weights file saves/HGERE/scire_models/scibert/tersibcop/facencbiaf-seq512-mem400-iter3-layernorm+_attnself/ent400-rel400-lr2e-5-1e-4-bs18-ep30-eps1e-8/Hyper_scierc_scibert-42/checkpoint-11208/pytorch_model.bin
+2025-11-08 23:30:42,047 [MainThread  ] [INFO ]  Evaluate on /root/siton-data-guanchunxiangData/fuleihao/HGERE/saves/sciner_models/pruner/biafencoder-spanlen12-rank768-hid768-span256-entnum3-18-lr2e-5/scierc_scibert-42/ent_pred_train.json
+2025-11-08 23:30:42,047 [MainThread  ] [INFO ]  ***** Running evaluation 11208 *****
+2025-11-08 23:30:42,047 [MainThread  ] [INFO ]    Batch size = 32
+2025-11-08 23:30:42,048 [MainThread  ] [INFO ]  loading from /root/siton-data-guanchunxiangData/fuleihao/HGERE/saves/sciner_models/pruner/biafencoder-spanlen12-rank768-hid768-span256-entnum3-18-lr2e-5/scierc_scibert-42/ent_pred_train.json
+2025-11-08 23:30:45,443 [MainThread  ] [INFO ]  maxR: 114
+2025-11-08 23:30:45,443 [MainThread  ] [INFO ]  maxL: 391
+2025-11-08 23:30:45,445 [MainThread  ] [INFO ]    Num examples = 1861
+2025-11-08 23:34:20,359 [MainThread  ] [INFO ]    Evaluation done in total 214.913847 secs (8.659284 example per second)
+2025-11-08 23:34:20,362 [MainThread  ] [INFO ]  Result:ner_p:0.9959, ner_r:0.9895, ner_f1:0.9927; rel_p:0.9770, rel_r:0.9640, rel_f1:0.9704; rel_p+:0.9698, rel_r+:0.9568, rel_f1+:0.9633
+2025-11-08 23:34:20,394 [MainThread  ] [INFO ]  Evaluate on /root/siton-data-guanchunxiangData/fuleihao/HGERE/saves/sciner_models/pruner/biafencoder-spanlen12-rank768-hid768-span256-entnum3-18-lr2e-5/scierc_scibert-42/ent_pred_test.json
+2025-11-08 23:34:20,395 [MainThread  ] [INFO ]  ***** Running evaluation 11208 *****
+2025-11-08 23:34:20,395 [MainThread  ] [INFO ]    Batch size = 32
+2025-11-08 23:34:20,396 [MainThread  ] [INFO ]  loading from /root/siton-data-guanchunxiangData/fuleihao/HGERE/saves/sciner_models/pruner/biafencoder-spanlen12-rank768-hid768-span256-entnum3-18-lr2e-5/scierc_scibert-42/ent_pred_test.json
+2025-11-08 23:34:21,202 [MainThread  ] [INFO ]  maxR: 125
+2025-11-08 23:34:21,202 [MainThread  ] [INFO ]  maxL: 338
+2025-11-08 23:34:21,204 [MainThread  ] [INFO ]    Num examples = 551
+2025-11-08 23:35:46,067 [MainThread  ] [INFO ]    Evaluation done in total 84.861543 secs (6.492929 example per second)
+2025-11-08 23:35:46,067 [MainThread  ] [INFO ]  Result:ner_p:0.7319, ner_r:0.7306, ner_f1:0.7312; rel_p:0.5774, rel_r:0.5092, rel_f1:0.5412; rel_p+:0.4412, rel_r+:0.3891, rel_f1+:0.4135
+2025-11-12 10:53:40,305 [MainThread  ] [WARNI]  Process rank: -1, device: cuda, n_gpu: 1, distributed training: False, 16-bits training: True
+2025-11-12 10:53:40,306 [MainThread  ] [INFO ]  loading configuration file /root/siton-data-guanchunxiangData/fuleihao/SURE/bert_models/scibert_scivocab_uncased/config.json
+2025-11-12 10:53:40,322 [MainThread  ] [INFO ]  Model config BertConfig {
+  "architectures": null,
+  "attention_probs_dropout_prob": 0.1,
+  "bos_token_id": null,
+  "do_sample": false,
+  "eos_token_ids": null,
+  "finetuning_task": null,
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 768,
+  "id2label": {
+    "0": "LABEL_0",
+    "1": "LABEL_1"
+  },
+  "initializer_range": 0.02,
+  "intermediate_size": 3072,
+  "is_decoder": false,
+  "label2id": {
+    "LABEL_0": 0,
+    "LABEL_1": 1
+  },
+  "layer_norm_eps": 1e-12,
+  "length_penalty": 1.0,
+  "max_length": 20,
+  "max_position_embeddings": 512,
+  "model_type": "bert",
+  "num_attention_heads": 12,
+  "num_beams": 1,
+  "num_hidden_layers": 12,
+  "num_labels": 13,
+  "num_return_sequences": 1,
+  "output_attentions": false,
+  "output_hidden_states": false,
+  "output_past": true,
+  "pad_token_id": 0,
+  "pruned_heads": {},
+  "repetition_penalty": 1.0,
+  "temperature": 1.0,
+  "top_k": 50,
+  "top_p": 1.0,
+  "torchscript": false,
+  "type_vocab_size": 2,
+  "use_bfloat16": false,
+  "vocab_size": 31090
+}
+
+2025-11-12 10:53:40,323 [MainThread  ] [INFO ]  Model name '/root/siton-data-guanchunxiangData/fuleihao/SURE/bert_models/scibert_scivocab_uncased' not found in model shortcut name list (bert-base-uncased, bert-large-uncased, bert-base-cased, bert-large-cased, bert-base-multilingual-uncased, bert-base-multilingual-cased, bert-base-chinese, bert-base-german-cased, bert-large-uncased-whole-word-masking, bert-large-cased-whole-word-masking, bert-large-uncased-whole-word-masking-finetuned-squad, bert-large-cased-whole-word-masking-finetuned-squad, bert-base-cased-finetuned-mrpc, bert-base-german-dbmdz-cased, bert-base-german-dbmdz-uncased, bert-base-finnish-cased-v1, bert-base-finnish-uncased-v1, bert-base-dutch-cased). Assuming '/root/siton-data-guanchunxiangData/fuleihao/SURE/bert_models/scibert_scivocab_uncased' is a path, a model identifier, or url to a directory containing tokenizer files.
+2025-11-12 10:53:40,323 [MainThread  ] [INFO ]  Didn't find file /root/siton-data-guanchunxiangData/fuleihao/SURE/bert_models/scibert_scivocab_uncased/added_tokens.json. We won't load it.
+2025-11-12 10:53:40,323 [MainThread  ] [INFO ]  Didn't find file /root/siton-data-guanchunxiangData/fuleihao/SURE/bert_models/scibert_scivocab_uncased/special_tokens_map.json. We won't load it.
+2025-11-12 10:53:40,323 [MainThread  ] [INFO ]  Didn't find file /root/siton-data-guanchunxiangData/fuleihao/SURE/bert_models/scibert_scivocab_uncased/tokenizer_config.json. We won't load it.
+2025-11-12 10:53:40,323 [MainThread  ] [INFO ]  loading file /root/siton-data-guanchunxiangData/fuleihao/SURE/bert_models/scibert_scivocab_uncased/vocab.txt
+2025-11-12 10:53:40,324 [MainThread  ] [INFO ]  loading file None
+2025-11-12 10:53:40,324 [MainThread  ] [INFO ]  loading file None
+2025-11-12 10:53:40,324 [MainThread  ] [INFO ]  loading file None
+2025-11-12 10:53:40,349 [MainThread  ] [INFO ]  loading weights file /root/siton-data-guanchunxiangData/fuleihao/SURE/bert_models/scibert_scivocab_uncased/pytorch_model.bin
+2025-11-12 10:53:42,823 [MainThread  ] [INFO ]  Weights of BertForHyperGNN not initialized from pretrained model: ['sub_encoder.projection.weight', 'sub_encoder.projection.bias', 'obj_encoder.projection.weight', 'obj_encoder.projection.bias', 'rel_encoder.projection.weight', 'rel_encoder.projection.bias', 'htnnlayer.hyperedgelayer1.factor_compose.proj1.weight', 'htnnlayer.hyperedgelayer1.factor_compose.proj1.bias', 'htnnlayer.hyperedgelayer1.factor_compose.proj2.weight', 'htnnlayer.hyperedgelayer1.factor_compose.proj2.bias', 'htnnlayer.hyperedgelayer1.factor_compose.proj3.weight', 'htnnlayer.hyperedgelayer1.factor_compose.proj3.bias', 'htnnlayer.hyperedgelayer1.factor_compose.encode_proj.weight', 'htnnlayer.hyperedgelayer1.factor_compose.encode_proj.bias', 'htnnlayer.hyperedgelayer1.layernorm.weight', 'htnnlayer.hyperedgelayer1.layernorm.bias', 'htnnlayer.hyperedgelayer2.factor_compose1.proj1.weight', 'htnnlayer.hyperedgelayer2.factor_compose1.proj1.bias', 'htnnlayer.hyperedgelayer2.factor_compose1.proj2.weight', 'htnnlayer.hyperedgelayer2.factor_compose1.proj2.bias', 'htnnlayer.hyperedgelayer2.factor_compose1.encoder.weight', 'htnnlayer.hyperedgelayer2.factor_compose1.encoder.bias', 'htnnlayer.hyperedgelayer2.factor_compose2.proj1.weight', 'htnnlayer.hyperedgelayer2.factor_compose2.proj1.bias', 'htnnlayer.hyperedgelayer2.factor_compose2.proj2.weight', 'htnnlayer.hyperedgelayer2.factor_compose2.proj2.bias', 'htnnlayer.hyperedgelayer2.factor_compose2.encoder.weight', 'htnnlayer.hyperedgelayer2.factor_compose2.encoder.bias', 'htnnlayer.hyperedgelayer2.layernorm1.weight', 'htnnlayer.hyperedgelayer2.layernorm1.bias', 'htnnlayer.hyperedgelayer2.layernorm2.weight', 'htnnlayer.hyperedgelayer2.layernorm2.bias', 'htnnlayer.aggregate.proj_s.weight', 'htnnlayer.aggregate.proj_s.bias', 'htnnlayer.aggregate.proj_o.weight', 'htnnlayer.aggregate.proj_o.bias', 'htnnlayer.aggregate.proj_r.weight', 'htnnlayer.aggregate.proj_r.bias', 'htnnlayer.aggregate.attn_combine_s.0.weight', 'htnnlayer.aggregate.attn_combine_s.0.bias', 'htnnlayer.aggregate.attn_combine_o.0.weight', 'htnnlayer.aggregate.attn_combine_o.0.bias', 'htnnlayer.aggregate.attn_combine_r.0.weight', 'htnnlayer.aggregate.attn_combine_r.0.bias', 'htnnlayer.aggregate.sv.weight', 'htnnlayer.aggregate.ov.weight', 'htnnlayer.aggregate.rv.weight', 'htnnlayer.aggregate.fc_s.weight', 'htnnlayer.aggregate.fc_s.bias', 'htnnlayer.aggregate.fc_o.weight', 'htnnlayer.aggregate.fc_o.bias', 'htnnlayer.aggregate.fc_r.weight', 'htnnlayer.aggregate.fc_r.bias', 'htnnlayer.aggregate.layernorm_s.weight', 'htnnlayer.aggregate.layernorm_s.bias', 'htnnlayer.aggregate.layernorm_o.weight', 'htnnlayer.aggregate.layernorm_o.bias', 'htnnlayer.aggregate.layernorm_r.weight', 'htnnlayer.aggregate.layernorm_r.bias', 'rel_cls.weight', 'rel_cls.bias', 'ner_cls.projection.weight', 'ner_cls.projection.bias', 'sub_layernorm.weight', 'sub_layernorm.bias', 'obj_layernorm.weight', 'obj_layernorm.bias', 'rel_layernorm.weight', 'rel_layernorm.bias']
+2025-11-12 10:53:42,824 [MainThread  ] [INFO ]  Weights from pretrained model not used in BertForHyperGNN: ['cls.predictions.bias', 'cls.predictions.transform.dense.weight', 'cls.predictions.transform.dense.bias', 'cls.predictions.transform.LayerNorm.weight', 'cls.predictions.transform.LayerNorm.bias', 'cls.predictions.decoder.weight', 'cls.predictions.decoder.bias', 'cls.seq_relationship.weight', 'cls.seq_relationship.bias']
+2025-11-12 10:53:42,826 [MainThread  ] [INFO ]   subject_id = 2950, object_id = 2567, mask_id = 104
+2025-11-12 10:53:45,000 [MainThread  ] [INFO ]  Training/evaluation parameters Namespace(data_dir='', model_type='hyper', model_name_or_path='/root/siton-data-guanchunxiangData/fuleihao/SURE/bert_models/scibert_scivocab_uncased', output_dir='saves/HGERE/scire_models/scibert/tersibcop/facencbiaf-seq512-mem400-iter3-layernorm+_attnself/ent400-rel400-lr2e-5-1e-4-bs18-ep30-eps1e-8/Hyper_scierc_scibert-42', ner_prediction_dir='saves/sciner_models/pruner/biafencoder-spanlen12-rank768-hid768-span256-entnum3-18-lr2e-5/scierc-scibert-45', config_name='', tokenizer_name='', cache_dir='', max_seq_length=512, do_train=True, do_eval=True, do_test=False, evaluate_during_training=True, do_lower_case=True, per_gpu_train_batch_size=18, per_gpu_eval_batch_size=32, gradient_accumulation_steps=1, learning_rate=2e-05, learning_rate_cls=0.0001, weight_decay=0.0, adam_epsilon=1e-08, max_grad_norm=1.0, num_train_epochs=30.0, max_steps=-1, warmup_steps=-1, logging_steps=5, save_steps=1000, eval_epochs=3, eval_all_checkpoints=True, no_cuda=False, overwrite_output_dir=True, overwrite_cache=False, seed=42, fp16=True, fp16_opt_level='O1', local_rank=-1, server_ip='', server_port='', save_total_limit=1, train_file='ent_pred_train.json', dev_file='ent_pred_dev.json', test_file='ent_pred_test.json', max_pair_length=18, alpha=1.0, save_results=False, no_test=False, eval_logsoftmax=False, eval_softmax=False, shuffle=False, lminit=False, no_sym=False, att_left=False, att_right=False, use_ner_results=False, use_typemarker=False, eval_unidirect=False, nocross=False, warmup_ratio=0.1, eval_logits=False, ent_repr='mix', uni_ent=False, ent_enc='cat', pred_sub=False, ner_cls='cat', rel_enc='cat', ent_dim=400, rel_dim=400, rel_rank=200, rel_factorize=False, baseline='firstorder', factor_type='tersibcop', mem_dim=400, iter=3, layernorm=True, layernorm_1st=True, attn_self=True, aggregate_type='attn', aggregate_func='max', agg_with_self=False, fix_obj=False, edgetype='sib', attn_scorer='biaf', attn_res=False, n_head=8, d_head=32, factor_encoder='biaf', iter1=1, hostname='6d13b2829953', n_gpu=1, device=device(type='cuda'), model_path='/root/siton-data-guanchunxiangData/fuleihao/SURE/bert_models/scibert_scivocab_uncased', continue_training=False, global_step=0)
+2025-11-12 10:53:45,012 [MainThread  ] [INFO ]  loading from saves/sciner_models/pruner/biafencoder-spanlen12-rank768-hid768-span256-entnum3-18-lr2e-5/scierc-scibert-45/ent_pred_train.json
+2025-11-12 10:53:48,362 [MainThread  ] [INFO ]  maxR: 114
+2025-11-12 10:53:48,363 [MainThread  ] [INFO ]  maxL: 391
