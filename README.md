@@ -3,7 +3,7 @@
 ```bash
 
 pip install -r requirements.txt
-cd transformers && pip install -e . && cd ..
+pip install --editable ./transformers
 ```
 
 Follow [PL-Marker](https://github.com/thunlp/PL-Marker) to prepare ACE04 / ACE05 / SciERC.
