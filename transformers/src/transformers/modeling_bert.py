@@ -2295,13 +2295,13 @@ class RelationNegotiator(nn.Module):
             gate_o2s_value = torch.sigmoid(self.gate_o2s(torch.cat([subject_states, subject_delta], dim=-1)))
             subject_states = self.subject_norm(subject_states + self.dropout(gate_o2s_value * subject_delta))
 
-            # subject_expanded = subject_states.unsqueeze(1).expand_as(object_states)
-            # refinement_input = torch.cat([object_states, subject_expanded], dim=-1)
-            # refinement_delta = self.feedback_refiner(refinement_input) * mask
+            subject_expanded = subject_states.unsqueeze(1).expand_as(object_states)
+            refinement_input = torch.cat([object_states, subject_expanded], dim=-1)
+            refinement_delta = self.feedback_refiner(refinement_input) * mask
 
-            # # Gated update for object refinement
-            # gate_refine_value = torch.sigmoid(self.gate_refine(torch.cat([object_states, refinement_delta], dim=-1)))
-            # object_states = self.object_refine_norm(object_states + self.dropout(gate_refine_value * refinement_delta))
+            # Gated update for object refinement
+            gate_refine_value = torch.sigmoid(self.gate_refine(torch.cat([object_states, refinement_delta], dim=-1)))
+            object_states = self.object_refine_norm(object_states + self.dropout(gate_refine_value * refinement_delta))
 
         return subject_states, object_states
 
